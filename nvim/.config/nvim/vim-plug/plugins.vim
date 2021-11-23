@@ -56,4 +56,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " close single buffer
   Plug 'moll/vim-bbye' 
 
+  " ae ie to select entire file content
+  Plug 'kana/vim-textobj-user'
+  Plug 'kana/vim-textobj-entire'
+
+  Plug 'voldikss/vim-floaterm'
+
 call plug#end()

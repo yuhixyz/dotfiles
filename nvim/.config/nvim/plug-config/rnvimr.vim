@@ -1,6 +1,6 @@
 " Make Ranger replace netrw and be the file explorer
 
-nmap <space>r :RnvimrToggle<CR>
+nmap <leader>r :FloatermNew ranger<CR>
 
 " Make Ranger replace Netrw and be the file explorer
 let g:rnvimr_enable_ex = 1
