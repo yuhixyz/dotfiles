@@ -31,16 +31,25 @@ alias szsh='source ~/.zshrc'
 alias vim='nvim'
 alias nvi='nvim'
 alias ra='ranger'
-alias ls='ls --color=auto'
+alias ls='ls -a --color=auto'
 alias ll='ls -l'
-alias la='ls -a'
 alias mkdir='mkdir -p'
 # tmux
-alias tn='tmux new -s'
+alias tls='tmux ls'
 alias tks='tmux kill-session -t'
 alias tka='tmux kill-server'
-alias tls='tmux ls'
-alias ta='tmux a -t'
+# alias ta='tmux attach-session -t'  # tm
+# alias tn='tmux new-session -t'     # tm
+# tm - create new tmux session, or switch to existing one. Works from within tmux too. (@bag-man)
+# `tm` will allow you to select your tmux session via fzf.
+# `tm irc` will attach to the irc session (if it exists), else it will create it.
+tm() {
+  [[ -n "$TMUX" ]] && change="switch-client" || change="attach-session"
+  if [ $1 ]; then
+	tmux $change -t "$1" 2>/dev/null || (tmux new-session -d -s $1 && tmux $change -t "$1"); return
+  fi
+  session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --exit-0) &&  tmux $change -t "$session" || echo "No sessions found."
+}
 
 export TERM=xterm-256color
 
@@ -63,12 +72,12 @@ unset __conda_setup
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
-export FZF_COMPLETION_TRIGGER='ll'
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || bat {}) 2> /dev/null | head -500'"
 export FZF_COMPLETION_TRIGGER='\'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+bindkey '^F' fzf-file-widget
 
+eval $(thefuck --alias)
 # starship
-# macos: brew install zsh
-# centos: sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+# macos: brew install starship
 eval "$(starship init zsh)"
