@@ -1,0 +1,31 @@
+#!/usr/bin/env sh
+
+set -x
+
+# initialization
+arch -arm64e sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="arch -arm64e sudo yabai --load-sa"
+
+
+# Auto focus on window after switching space.
+yabai -m signal --add event=space_changed action='~/.config/yabai/active_window_when_change_space.sh'
+
+# general space settings
+yabai -m config layout                       bsp
+yabai -m config top_padding                  30
+yabai -m config bottom_padding               3
+yabai -m config left_padding                 3
+yabai -m config right_padding                3
+yabai -m config window_gap                   5
+
+# exclusions
+otherApp='^(访达|关于本机|系统偏好设置|邮件|百度网盘|词典|计算器|快捷指令|日历|时间机器|活动监视器|腾讯会议|提醒事项|备忘录|便笺|QQ|微信|企业微信|查找|文本编辑|音乐|迅雷|照片|自动切换输入法 Lite|AltTab|预览|字体册|AirBuddy|YesPlayMusic|Logi Options|JetBrains Toolbox|Keka|HapiGo|MonitorControl|Mos|NewFileMenu|One Switch|OpenInTerminal|PopClip|Parallels Desktop|Raycast|Rectangle|START|Steam|Tencent Lemon|ClashX)$'
+yabai -m rule --add app="${otherApp}" manage=off border=off
+
+# rules 
+yabai -m rule --add label=musicapp app="^YesPlayMusic" space=6
+yabai -m rule --add label=qq app="^QQ" space=4
+yabai -m rule --add label=wechat app="^微信" space=4
+yabai -m rule --add label=wechat2 app="^企业微信" space=4
+
+echo "yabai configuration loaded.."

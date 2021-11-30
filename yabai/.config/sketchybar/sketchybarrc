@@ -1,0 +1,94 @@
+############## BAR ############## 
+sketchybar -m --bar height=24        \
+                    blur_radius=0   \
+                    position=top     \
+                    padding_left=10  \
+                    padding_right=10 \
+                    color=0x44000000
+
+############## GLOBAL DEFAULTS ############## 
+sketchybar -m --default updates=when_shown                    \
+                        drawing=on                            \
+                        cache_scripts=on                      \
+                        icon.font="Hack Nerd Font Mono:Bold:15.0"  \
+                        icon.color=0xffffffff                 \
+                        label.font="Hack Nerd Font Mono:Bold:14.0" \
+                        label.color=0xffffffff
+
+############## SPACE DEFAULTS ############## 
+sketchybar -m --default label.padding_left=2  \
+                        label.padding_right=8 \
+                        icon.padding_left=8   \
+                        icon.padding_right=6
+
+############## PRIMARY DISPLAY SPACES ############## 
+sketchybar -m --add space code left                              \
+              --set code associated_space=1                      \
+                         associated_display=1                    \
+                         icon=􀃋                            \
+                         icon.highlight_color=0xffb380ff         \
+                         label=code                              \
+                         click_script="yabai -m space --focus 1" \
+                                                                 \
+              --add space research left                               \
+              --set research  associated_space=2                      \
+                         associated_display=1                    \
+                         icon.highlight_color=0xff66a3ff         \
+                         icon=􀃍                                \
+                         label=research                               \
+                         click_script="yabai -m space --focus 2" \
+                                                                 \
+              --add space surf left                               \
+              --set surf associated_space=3                      \
+                         associated_display=1                    \
+                         icon=􀃏                                \
+                         icon.highlight_color=0xff33cc33         \
+                         label=surf                              \
+                         click_script="yabai -m space --focus 3" \
+                                                                 \
+              --add space social left                               \
+              --set social associated_space=4                      \
+                         associated_display=1                    \
+                         icon=􀃑                           \
+                         icon.highlight_color=0xff00e5e6         \
+                         label=social                              \
+                         click_script="yabai -m space --focus 4" \
+                                                                 \
+              --add space music left                               \
+              --set music associated_space=5                      \
+                         associated_display=1                    \
+                         icon=􀃓                            \
+                         icon.highlight_color=0xffffad33         \
+                         label=music                              \
+                         click_script="yabai -m space --focus 5" \
+                                                                 \
+              --add space video left                               \
+              --set video associated_space=6                      \
+                         associated_display=1                    \
+                         icon=􀃕                                 \
+                         icon.highlight_color=0xffff80bf         \
+                         label=video                              \
+                         click_script="yabai -m space --focus 6" 
+
+############## ITEM DEFAULTS ###############
+sketchybar -m --default label.padding_left=2  \
+                        icon.padding_right=2  \
+                        icon.padding_left=6   \
+                        label.padding_right=6
+
+############## RIGHT ITEMS ############## 
+sketchybar -m --add item clock right                                                                  \
+              --set clock         update_freq=10                                                      \
+                                  script="~/.config/sketchybar/plugins/clock.sh"                      \
+                                                                                                      \
+              --add item mailIndicator right                                                          \
+              --set mailIndicator update_freq=30                                                      \
+                                  script="~/.config/sketchybar/plugins/mailIndicator.sh"              \
+                                  icon.font="Hack Nerd Font Mono:Bold:20.0"                                \
+                                  icon=                                                              \
+                                  click_script="osascript -e 'tell application \"Mail\" to activate'"
+
+############## FINALIZING THE SETUP ##############
+sketchybar -m --update
+
+echo "sketchybar configuration loaded.."
