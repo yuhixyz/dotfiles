@@ -8,6 +8,7 @@ source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/rnvimr.vim
 source $HOME/.config/nvim/plug-config/markdown-preview.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim
+source $HOME/.config/nvim/plug-config/signify.vim
 
 " lua require'plug-colorizer'
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
