@@ -87,3 +87,6 @@ let g:mkdp_page_title = '「${name}」'
 " recognized filetypes
 " these filetypes will have MarkdownPreview... commands
 let g:mkdp_filetypes = ['markdown']
+
+
+nnoremap <leader>gm :MarkdownPreview<CR>

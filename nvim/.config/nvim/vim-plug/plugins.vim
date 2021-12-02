@@ -60,9 +60,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'kana/vim-textobj-user'
   Plug 'kana/vim-textobj-entire'
 
+  " floaterm
   Plug 'voldikss/vim-floaterm'
 
+  " markdown
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
   
+  Plug 'norcalli/nvim-colorizer.lua'
+
+  " rainbow brackets
+  Plug 'junegunn/rainbow_parentheses.vim'
+
+  Plug 'honza/vim-snippets'
 
 call plug#end()
