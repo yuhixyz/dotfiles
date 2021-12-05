@@ -1,3 +1,5 @@
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+
 # setup zinit 
 if [[ ! -f ~/.zinit/bin/zinit.zsh ]]; then
 	mkdir ~/.zinit/bin
@@ -31,8 +33,9 @@ alias szsh='source ~/.zshrc'
 alias vim='nvim'
 alias nvi='nvim'
 alias ra='ranger'
-alias ls='ls -a --color=auto'
-alias ll='ls -l'
+alias ls='exa -h'
+alias la='ls -a'
+alias ll='ls -al'
 alias mkdir='mkdir -p'
 # tmux
 alias tls='tmux ls'
