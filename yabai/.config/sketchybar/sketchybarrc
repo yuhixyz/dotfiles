@@ -1,7 +1,7 @@
 ############## BAR ############## 
 sketchybar -m --bar height=24        \
                     blur_radius=0   \
-                    position=top     \
+                    position=bottom     \
                     padding_left=10  \
                     padding_right=10 \
                     color=0x44000000
@@ -81,12 +81,12 @@ sketchybar -m --add item clock right                                            
               --set clock         update_freq=10                                                      \
                                   script="~/.config/sketchybar/plugins/clock.sh"                      \
                                                                                                       \
-              --add item mailIndicator right                                                          \
-              --set mailIndicator update_freq=30                                                      \
-                                  script="~/.config/sketchybar/plugins/mailIndicator.sh"              \
-                                  icon.font="Hack Nerd Font Mono:Bold:20.0"                                \
-                                  icon=                                                              \
-                                  click_script="osascript -e 'tell application \"Mail\" to activate'"
+              /* --add item mailIndicator right                                                          \ */
+              /* --set mailIndicator update_freq=30                                                      \ */
+              /*                     script="~/.config/sketchybar/plugins/mailIndicator.sh"              \ */
+              /*                     icon.font="Hack Nerd Font Mono:Bold:20.0"                                \ */
+              /*                     icon=                                                              \ */
+              /*                     click_script="osascript -e 'tell application \"Mail\" to activate'" */
 
 ############## FINALIZING THE SETUP ##############
 sketchybar -m --update
