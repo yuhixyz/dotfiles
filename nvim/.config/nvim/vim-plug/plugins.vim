@@ -73,4 +73,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'honza/vim-snippets'
 
+  Plug 'vimwiki/vimwiki'
+  
 call plug#end()
