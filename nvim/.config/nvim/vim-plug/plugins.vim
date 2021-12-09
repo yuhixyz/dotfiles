@@ -63,16 +63,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " floaterm
   Plug 'voldikss/vim-floaterm'
 
-  " markdown
+  " markdown preview
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
   
+  " color
   Plug 'norcalli/nvim-colorizer.lua'
-
-  " rainbow brackets
-  Plug 'junegunn/rainbow_parentheses.vim'
-
-  Plug 'honza/vim-snippets'
-
-  Plug 'vimwiki/vimwiki'
   
+  " snippets
+  Plug 'honza/vim-snippets'
+  
+  " ps: conficts with rainbow
+  Plug 'vimwiki/vimwiki'
+
 call plug#end()

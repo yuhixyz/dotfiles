@@ -11,3 +11,5 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
+" highlight visual select
+hi visual term=reverse cterm=reverse guibg=#eab676

@@ -36,8 +36,9 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 " set autochdir                           " Your working directory will always be the same as your working directory
 set ignorecase
 set laststatus=2
-filetype plugin indent on
-
+set nocompatible
+filetype plugin on
+syntax on
 " truecolor
 if has("termguicolors")
     " fix bug for vim
@@ -46,3 +47,4 @@ if has("termguicolors")
     " enable true color
     set termguicolors
 endif
+
