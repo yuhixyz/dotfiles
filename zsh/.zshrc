@@ -84,3 +84,4 @@ eval $(thefuck --alias)
 # starship
 # macos: brew install starship
 eval "$(starship init zsh)"
+export EDITOR=/opt/homebrew/bin/nvim
