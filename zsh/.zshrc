@@ -56,6 +56,7 @@ tm() {
 
 export TERM=xterm-256color
 
+# https://github.com/conda-forge/miniforge/#download
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/yuhixyz/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
