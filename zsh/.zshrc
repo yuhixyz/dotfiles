@@ -30,6 +30,7 @@ if [[ ! -d ~/.fzf ]]; then
 fi
 # alias
 alias szsh='source ~/.zshrc'
+alias lg='lazygit'
 alias vim='nvim'
 alias nvi='nvim'
 alias ra='ranger'
