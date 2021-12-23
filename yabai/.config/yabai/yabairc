@@ -16,9 +16,9 @@ yabai -m rule --add app="^YesPlayMusic$" space=5
 # general settings
 yabai -m config layout                       bsp
 yabai -m config top_padding                  7
-yabai -m config bottom_padding               30
-yabai -m config left_padding                 7
-yabai -m config right_padding                7
-yabai -m config window_gap                   6
+yabai -m config bottom_padding               45
+yabai -m config left_padding                 3
+yabai -m config right_padding                3
+yabai -m config window_gap                   5
 
 echo "yabai configuration loaded.."
