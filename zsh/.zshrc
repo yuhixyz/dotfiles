@@ -31,6 +31,7 @@ fi
 # alias
 alias szsh='source ~/.zshrc'
 alias lg='lazygit'
+alias vi='nvim'
 alias vim='nvim'
 alias nvi='nvim'
 alias ra='ranger'
