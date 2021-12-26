@@ -39,9 +39,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " ranger
   Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
  
-  " startify
-  Plug 'mhinz/vim-startify'
-  
+  " " startify
+  " Plug 'mhinz/vim-startify'
+  " dashboard
+  Plug 'glepnir/dashboard-nvim'
+
   " fuzzy file finder
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
