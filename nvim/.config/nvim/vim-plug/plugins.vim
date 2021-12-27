@@ -25,9 +25,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
 
-  " status bar
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
+  " " status bar
+  " Plug 'vim-airline/vim-airline'
+  " Plug 'vim-airline/vim-airline-themes'
+  Plug 'nvim-lualine/lualine.nvim'
+  " If you want to have icons in your statusline choose one of these
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'romgrk/barbar.nvim'
 
   " themes
   Plug 'arcticicestudio/nord-vim'
@@ -55,8 +59,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " rust
   Plug 'rust-lang/rust.vim'
 
-  " close single buffer
-  Plug 'moll/vim-bbye' 
+  " " close single buffer
+  " Plug 'moll/vim-bbye' 
 
   " ae ie to select entire file content
   Plug 'kana/vim-textobj-user'

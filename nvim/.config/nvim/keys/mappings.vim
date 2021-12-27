@@ -23,6 +23,6 @@ cnoremap <C-k> <C-p>
 vnoremap < <gv
 vnoremap > >gv
 
-" supported by plugin: bbye
-" close single buffer
-nnoremap <C-q> :Bdelete<CR>
+" " supported by plugin: bbye
+" " close single buffer
+" nnoremap <C-q> :Bdelete<CR>
