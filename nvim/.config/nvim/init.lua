@@ -1,0 +1,6 @@
+require('plugins')
+require('keymappings')
+require('settings')
+require('colorscheme')
+require('floaterm-config')
+require('dashboard-config')

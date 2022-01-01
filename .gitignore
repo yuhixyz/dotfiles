@@ -1,4 +1,4 @@
 .DS_Store
-/nvim/.config/nvim/autoload
+/nvim/.config/nvim/plugin
 /karabiner/.config/karabiner/assets
 /karabiner/.config/karabiner/automatic_backups
