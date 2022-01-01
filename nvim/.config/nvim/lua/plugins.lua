@@ -8,16 +8,18 @@ return require('packer').startup(function(use)
     -- packer self
     use 'wbthomason/packer.nvim'
   
+    -- file explorer
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {'kyazdani42/nvim-web-devicons'},
         config = function() require'nvim-tree'.setup {} end
     }
   
+    -- vim-tmux-navigator
     use 'christoomey/vim-tmux-navigator'
 
     use 'tpope/vim-commentary'
-  
+
     use 'tpope/vim-surround'
 
     use 'jiangmiao/auto-pairs'
@@ -64,21 +66,9 @@ return require('packer').startup(function(use)
     -- snippets
     use 'honza/vim-snippets'
 
-    use {
-        'vimwiki/vimwiki',
-        config = function()
-            vim.g.vimwiki_global_ext = 0
-            vim.g.vimwiki_list = {
-                {
-                    path = '~/vimwiki/',
-                    syntax = 'markdown',
-                    ext = '.md',
-                }
-            }
-            vim.g.vimwiki_markdown_link_ext = 1
-            vim.g.vimwiki_conceallevel = 2
-        end
-    }
+    -- vimwiki
+    use 'vimwiki/vimwiki'
+    
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

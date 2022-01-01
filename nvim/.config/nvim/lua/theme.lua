@@ -9,4 +9,4 @@ vim.api.nvim_command([[
 vim.cmd[[colorscheme palenight]]
 
 -- statusline
-require'lualine'.setup()
+require('lualine').setup()

@@ -1,6 +1,8 @@
 require('plugins')
 require('keymappings')
 require('settings')
-require('colorscheme')
-require('floaterm-config')
-require('dashboard-config')
+require('theme')
+require('plug-config/floaterm')
+require('plug-config/dashboard')
+require('plug-config/vimwiki')
+
