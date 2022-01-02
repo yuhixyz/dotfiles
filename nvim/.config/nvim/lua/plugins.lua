@@ -24,8 +24,8 @@ return require('packer').startup(function(use)
 
     use 'jiangmiao/auto-pairs'
 
-    use 'justinmk/vim-sneak'
-  
+    use 'easymotion/vim-easymotion'
+
     -- colorscheme
     use 'drewtempelmeyer/palenight.vim'
   
