@@ -23,6 +23,8 @@ return require('packer').startup(function(use)
     use 'tpope/vim-surround'
 
     use 'jiangmiao/auto-pairs'
+
+    use 'justinmk/vim-sneak'
   
     -- colorscheme
     use 'drewtempelmeyer/palenight.vim'

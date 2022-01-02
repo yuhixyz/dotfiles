@@ -1,4 +1,4 @@
--- set offset for buffer/tabline 
+-- set offset for barbar
 -- https://github.com/romgrk/barbar.nvim/issues/177
 local tree ={}
 local g = vim.g

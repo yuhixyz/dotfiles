@@ -60,4 +60,4 @@ vim.api.nvim_set_keymap('n', '<Leader>co', ":edit $MYVIMRC<CR>", { noremap = tru
 -- file explorer: nvim-tree
 -- vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 -- set offset for buffer: tree.lua
-vim.api.nvim_set_keymap('n', '<Leader>e', ":lua require('custom.tree').toggle()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>e', ":lua require('plug-config.barbar').toggle()<CR>", { noremap = true, silent = true })
