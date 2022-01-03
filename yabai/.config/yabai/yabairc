@@ -4,7 +4,7 @@ sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 # include 
-apps='^(iTerm2|Google Chrome|PDF Expert|WPS Office|Code|Neovide)$'
+apps='^(iTerm2|Google Chrome|PDF Expert|WPS Office|Code|VimR|Neovide)$'
 yabai -m rule --add app!="${apps}" manage=off
 yabai -m rule --add app="^WPS Office$" space=2
 yabai -m rule --add app="^PDF Expert$" space=2
