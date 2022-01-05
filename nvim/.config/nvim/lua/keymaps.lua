@@ -45,13 +45,15 @@ vim.api.nvim_set_keymap('n', '<C-q>', ':BufferClose<CR>', { noremap = true, sile
 -- markdown preview
 vim.api.nvim_set_keymap('n', '<Leader>gm', ':MarkdownPreview<CR>', { noremap = true, silent = true })
 
--- fzf
+-- fzf-lua
 -- search files
-vim.api.nvim_set_keymap('n', '<Leader>ff', ":Files<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>ff', ":FzfLua files<CR>", { noremap = true, silent = true })
 -- search recent files
-vim.api.nvim_set_keymap('n', '<Leader>fh', ":History<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>fh', ":FzfLua oldfiles<CR>", { noremap = true, silent = true })
 -- search lines in buffers
-vim.api.nvim_set_keymap('n', '<Leader>fl', ":Lines<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>fl', ":FzfLua lines<CR>", { noremap = true, silent = true })
+-- search marks
+vim.api.nvim_set_keymap('n', '<Leader>fb', ":FzfLua marks<CR>", { noremap = true, silent = true })
 
 -- dashboard
 vim.api.nvim_set_keymap('n', '<Leader>nf', ':DashboardNewFile<CR>', { noremap = true, silent = true })

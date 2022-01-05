@@ -61,15 +61,13 @@ return require('packer').startup(function(use)
         ft = {"markdown"}
     }
     -- fzf-lua  not work in gui nvim
-    -- use { 
-    --     'ibhagwan/fzf-lua',
-    --     requires = {'kyazdani42/nvim-web-devicons'}
-    -- }
+    use {
+        'ibhagwan/fzf-lua',
+        requires = {'kyazdani42/nvim-web-devicons'}
+    }
     -- fzf
-	use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
-	use {'junegunn/fzf.vim'}
-    -- vim-rooter
-    use 'airblade/vim-rooter'
+	-- use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
+	-- use {'junegunn/fzf.vim'}
     -- floaterm
     use 'voldikss/vim-floaterm'
     -- vimwiki
