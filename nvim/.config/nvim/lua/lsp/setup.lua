@@ -6,6 +6,12 @@ local lsp_installer = require("nvim-lsp-installer")
 local servers = {
     sumneko_lua = require("lsp.lua"), -- /lua/lsp/lua.lua
     jedi_language_server = require("lsp.python"),
+    zk = require("lsp.markdown"),
+    rust_analyzer = require("lsp.rust"),
+    clangd = require("lsp.cpp"),
+    cssls = require("lsp.css"),
+    html = require("lsp.html"),
+    emmet_ls = require("lsp.emmet"),
 }
 -- auto install languageservers
 for name, _ in pairs(servers) do
