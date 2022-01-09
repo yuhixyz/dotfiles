@@ -1,12 +1,11 @@
 export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
 
 # setup zinit 
-if [[ ! -f ~/.zinit/bin/zinit.zsh ]]; then
-	mkdir ~/.zinit/bin
-	git clone https://github.com/zdharma-continuum/zinit.git ~/.zinit/bin
+if [[ ! -f /opt/homebrew/opt/zinit/zinit.zsh ]]; then
+    brew install zinit
 fi
 # load zinit
-source ~/.zinit/bin/zinit.zsh
+source /opt/homebrew/opt/zinit/zinit.zsh
 
 
 # plugins
@@ -24,9 +23,9 @@ zinit light esc/conda-zsh-completion
 # autojump
 zinit snippet OMZ::plugins/autojump/autojump.plugin.zsh
 # setup fzf
-if [[ ! -d ~/.fzf ]]; then
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install
+if [[ ! -d $(brew --prefix)/opt/fzf ]]; then
+    brew install fzf
+    $(brew --prefix)/opt/fzf/install
 fi
 # alias
 alias szsh='source ~/.zshrc'
@@ -81,7 +80,6 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || bat {}) 2> /dev/null | head -500'"
 export FZF_COMPLETION_TRIGGER='\'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-bindkey '^F' fzf-file-widget
 
 eval $(thefuck --alias)
 # starship
