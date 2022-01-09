@@ -54,22 +54,20 @@ return require('packer').startup(function(use)
     use 'kana/vim-textobj-user'
     use 'kana/vim-textobj-entire'
     -- markdown preview
-    use {
+    use({
         'iamcco/markdown-preview.nvim',
         run = 'cd app && npm install',
         setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
         ft = {"markdown"}
-    }
-    -- fzf-lua  not work in gui nvim
+    })
+    -- fzf-lua
     use {
         'ibhagwan/fzf-lua',
         requires = {'kyazdani42/nvim-web-devicons'}
     }
-    -- fzf
-	-- use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
-	-- use {'junegunn/fzf.vim'}
-    -- floaterm
-    use 'voldikss/vim-floaterm'
+    -- terminal
+    -- use 'voldikss/vim-floaterm'
+    use 'akinsho/toggleterm.nvim'
     -- vimwiki
     use 'vimwiki/vimwiki'
 
