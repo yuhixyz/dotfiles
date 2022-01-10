@@ -9,4 +9,5 @@ require('plug-config.toggleterm')
 require('plug-config.dashboard')
 require('plug-config.vimwiki')
 require('plug-config.barbar')
+require('plug-config.nvim-tree')
 
