@@ -2,7 +2,7 @@
 --- builtin ---
 ---------------
 
--- leader 
+-- leader
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', { noremap = true, silent = true })
 vim.g.mapleader = ' '
 
@@ -25,13 +25,6 @@ vim.api.nvim_set_keymap('n', 'W', ':w<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'Q', ':q<CR>', { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('n', 'S', ':source $MYVIMRC<CR>', { noremap = true })
 
--- better navigation for completion
--- overwrited by mappings in nvim-cmp.lua
--- vim.api.nvim_set_keymap('i', '<C-j>', '<C-n>', { noremap = true })
--- vim.api.nvim_set_keymap('i', '<C-k>', '<C-p>', { noremap = true })
--- vim.api.nvim_set_keymap('c', '<C-j>', '<C-n>', { noremap = true })
--- vim.api.nvim_set_keymap('c', '<C-k>', '<C-p>', { noremap = true })
-
 ---------------
 --- plugins ---
 ---------------
@@ -53,10 +46,10 @@ vim.api.nvim_set_keymap('n', '<Leader>fh', ":FzfLua oldfiles<CR>", { noremap = t
 -- search lines in buffers
 vim.api.nvim_set_keymap('n', '<Leader>fl', ":FzfLua lines<CR>", { noremap = true, silent = true })
 -- search marks
-vim.api.nvim_set_keymap('n', '<Leader>fb', ":FzfLua marks<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>fm', ":FzfLua marks<CR>", { noremap = true, silent = true })
 
 -- dashboard
-vim.api.nvim_set_keymap('n', '<Leader>nf', ':DashboardNewFile<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>fn', ':DashboardNewFile<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>co', ':edit $MYVIMRC<CR>', { noremap = true, silent = true })
 
 -- file explorer: nvim-tree
@@ -73,5 +66,5 @@ vim.api.nvim_set_keymap('n', 'gd', ':lua vim.lsp.buf.definition()<cr>', { norema
 vim.api.nvim_set_keymap('n', 'gD', ':lua vim.lsp.buf.declaration()<cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'gi', ':lua vim.lsp.buf.implementation()<cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'gr', ':lua vim.lsp.buf.references()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'gh', ':lua vim.lsp.buf.hover()<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'K', ':lua vim.lsp.buf.hover()<cr>', { noremap = true, silent = true })
 
