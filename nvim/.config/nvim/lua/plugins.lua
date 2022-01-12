@@ -42,14 +42,18 @@ return require('packer').startup(function(use)
         'neovim/nvim-lspconfig',
         'williamboman/nvim-lsp-installer',
     }
+    -- nvim-cmp
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
-    -- snippets
+    -- vsnip
     use 'hrsh7th/cmp-vsnip'
     use 'hrsh7th/vim-vsnip'
+    use 'rafamadriz/friendly-snippets'
+    -- lspkind
+    use 'onsails/lspkind-nvim'
     -- ae ie as text object
     use 'kana/vim-textobj-user'
     use 'kana/vim-textobj-entire'
