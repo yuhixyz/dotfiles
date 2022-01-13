@@ -11,7 +11,6 @@ return require('packer').startup(function(use)
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {'kyazdani42/nvim-web-devicons'},
-        config = function() require'nvim-tree'.setup {} end
     }
     -- vim-tmux-navigator
     use 'christoomey/vim-tmux-navigator'
@@ -50,7 +49,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/nvim-cmp'
     -- vsnip
     use 'hrsh7th/cmp-vsnip'
-    use 'rafamadriz/friendly-snippets'
+    use 'hrsh7th/vim-vsnip'
     use 'rafamadriz/friendly-snippets'
     -- lspkind
     use 'onsails/lspkind-nvim'

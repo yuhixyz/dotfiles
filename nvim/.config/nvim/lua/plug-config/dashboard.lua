@@ -7,7 +7,7 @@ vim.g.dashboard_custom_section = {
     e = {description = {" Configuration               leader co"}, command = "edit $MYVIMRC"},
     f = {description = {" New File                    leader nf"}, command = "DashboardNewFile"},
     g = {description = {" Update Plugins              leader uu"}, command = "PackerUpdate"},
-} 
+}
 
 vim.g.dashboard_custom_header = {
     "                                   ",

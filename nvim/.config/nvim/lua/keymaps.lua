@@ -2,69 +2,63 @@
 --- builtin ---
 ---------------
 
--- leader
-vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', { noremap = true, silent = true })
+-- set <space> as leader key
 vim.g.mapleader = ' '
 
+local keymap = vim.api.nvim_set_keymap
+local opt = {
+    noremap = true,
+    silent = true
+}
+
 -- escape
-vim.api.nvim_set_keymap('i', 'jj', '<ESC>', { noremap = true, silent = true })
-
+keymap('i', 'jj', '<ESC>', opt)
 -- no hl
-vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', { noremap = true, silent = true })
-
+keymap('n', '<Leader>h', ':set hlsearch!<CR>', opt)
 -- better indenting
-vim.api.nvim_set_keymap('v', '<', '<gv', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '>', '>gv', { noremap = true, silent = true })
-
+keymap('v', '<', '<gv', opt)
+keymap('v', '>', '>gv', opt)
 -- switch buffer
-vim.api.nvim_set_keymap('n', 'H', ':bprevious<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'L', ':bnext<CR>', { noremap = true, silent = true })
-
+keymap('n', 'H', ':bprevious<CR>', opt)
+keymap('n', 'L', ':bnext<CR>', opt)
 -- write / quit / source
-vim.api.nvim_set_keymap('n', 'W', ':w<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'Q', ':q<CR>', { noremap = true, silent = true })
--- vim.api.nvim_set_keymap('n', 'S', ':source $MYVIMRC<CR>', { noremap = true })
+keymap('n', 'W', ':w<CR>', opt)
+keymap('n', 'Q', ':q<CR>', opt)
+-- keymap('n', 'S', ':source $MYVIMRC<CR>', { noremap = true })
 
 ---------------
 --- plugins ---
 ---------------
 
 -- packer update
-vim.api.nvim_set_keymap('n', '<Leader>u', ':PackerUpdate<CR>', { noremap = true, silent = true })
+keymap('n', '<Leader>u', ':PackerUpdate<CR>', opt)
 
 -- close single buffer
-vim.api.nvim_set_keymap('n', '<C-q>', ':BufferClose<CR>', { noremap = true, silent = true })
+keymap('n', '<C-q>', ':BufferClose<CR>', opt)
 
 -- markdown preview
-vim.api.nvim_set_keymap('n', '<Leader>gm', ':MarkdownPreview<CR>', { noremap = true, silent = true })
+keymap('n', '<Leader>gm', ':MarkdownPreview<CR>', opt)
 
 -- fzf-lua
 -- search files
-vim.api.nvim_set_keymap('n', '<Leader>ff', ":FzfLua files<CR>", { noremap = true, silent = true })
+keymap('n', '<Leader>ff', ":FzfLua files<CR>", opt)
 -- search recent files
-vim.api.nvim_set_keymap('n', '<Leader>fh', ":FzfLua oldfiles<CR>", { noremap = true, silent = true })
+keymap('n', '<Leader>fh', ":FzfLua oldfiles<CR>", opt)
 -- search lines in buffers
-vim.api.nvim_set_keymap('n', '<Leader>fl', ":FzfLua lines<CR>", { noremap = true, silent = true })
+keymap('n', '<Leader>fl', ":FzfLua lines<CR>", opt)
 -- search marks
-vim.api.nvim_set_keymap('n', '<Leader>fm', ":FzfLua marks<CR>", { noremap = true, silent = true })
+keymap('n', '<Leader>fm', ":FzfLua marks<CR>", opt)
 
 -- dashboard
-vim.api.nvim_set_keymap('n', '<Leader>fn', ':DashboardNewFile<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>co', ':edit $MYVIMRC<CR>', { noremap = true, silent = true })
+keymap('n', '<Leader>fn', ':DashboardNewFile<CR>', opt)
+keymap('n', '<Leader>co', ':edit $MYVIMRC<CR>', opt)
 
 -- file explorer: nvim-tree
--- vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
--- set offset for buffer: tree.lua
-vim.api.nvim_set_keymap('n', '<Leader>e', ":lua require('plug-config.barbar').toggle()<CR>", { noremap = true, silent = true })
+-- keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', opt)
+-- set offset for buffer
+keymap('n', '<Leader>e', ":lua require('plug-config.barbar').toggle()<CR>", opt)
 
 -- easymotion
 -- s<char><char> or s<char><CR>
-vim.api.nvim_set_keymap('n', 's', '<Plug>(easymotion-s2)', { silent = true })
-
--- lsp
-vim.api.nvim_set_keymap('n', 'gd', ':lua vim.lsp.buf.definition()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'gD', ':lua vim.lsp.buf.declaration()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'gi', ':lua vim.lsp.buf.implementation()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'gr', ':lua vim.lsp.buf.references()<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'K', ':lua vim.lsp.buf.hover()<cr>', { noremap = true, silent = true })
+keymap('n', 's', '<Plug>(easymotion-s2)', { silent = true })
 
