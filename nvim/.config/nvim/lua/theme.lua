@@ -7,8 +7,11 @@ vim.api.nvim_command([[
 
 -- colorscheme
 -- vim.cmd[[colorscheme palenight]]
-vim.cmd[[colorscheme rose-pine]]
-vim.cmd[[hi BufferOffset guibg=#fffff]]
+vim.cmd[[
+    colorscheme rose-pine
+    hi BufferOffset guibg=#f
+    hi BufferTabpageFill guibg=#f
+]]
 -- vim.cmd[[colorscheme dracula]]
 
 -- statusline
