@@ -4,3 +4,4 @@ require('keymaps')
 require('theme')
 require('lsp.setup')
 require('plug-config')
+

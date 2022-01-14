@@ -25,13 +25,13 @@ end
 lsp_installer.on_server_ready(function(server)
     local opts = servers[server.name]
     if opts then
-        opts.on_attach = function(_, bufnr)
-            local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-            buf_set_keymap('n', 'gd', ':lua vim.lsp.buf.definition()<cr>', { noremap = true, silent = true })
-            buf_set_keymap('n', 'gi', ':lua vim.lsp.buf.implementation()<cr>', { noremap = true, silent = true })
-            buf_set_keymap('n', 'gr', ':lua vim.lsp.buf.references()<cr>', { noremap = true, silent = true })
-            buf_set_keymap('n', 'gh', ':lua vim.lsp.buf.hover()<cr>', { noremap = true, silent = true })
-        end
+        -- opts.on_attach = function(_, bufnr)
+        --     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+        --     buf_set_keymap('n', 'gd', ':lua vim.lsp.buf.definition()<cr>', { noremap = true, silent = true })
+        --     buf_set_keymap('n', 'gi', ':lua vim.lsp.buf.implementation()<cr>', { noremap = true, silent = true })
+        --     buf_set_keymap('n', 'gr', ':lua vim.lsp.buf.references()<cr>', { noremap = true, silent = true })
+        --     buf_set_keymap('n', 'gh', ':lua vim.lsp.buf.hover()<cr>', { noremap = true, silent = true })
+        -- end
         opts.flags = {
             debounce_text_changes = 150,
         }

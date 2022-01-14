@@ -27,7 +27,8 @@ return require('packer').startup(function(use)
     -- surround
     use 'tpope/vim-surround'
     -- easymotion
-    use 'easymotion/vim-easymotion'
+    -- use 'easymotion/vim-easymotion'
+    use 'justinmk/vim-sneak'
     -- colorscheme
     use 'drewtempelmeyer/palenight.vim'
     use 'rose-pine/neovim'
@@ -54,6 +55,7 @@ return require('packer').startup(function(use)
         'neovim/nvim-lspconfig',
         'williamboman/nvim-lsp-installer',
     }
+    use 'tami5/lspsaga.nvim'
     -- nvim-cmp
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
