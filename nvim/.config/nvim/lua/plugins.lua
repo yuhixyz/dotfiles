@@ -14,16 +14,24 @@ return require('packer').startup(function(use)
     }
     -- vim-tmux-navigator
     use 'christoomey/vim-tmux-navigator'
+    -- treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+    }
+    use 'p00f/nvim-ts-rainbow'
+    use 'windwp/nvim-ts-autotag'
+    use 'windwp/nvim-autopairs'
     -- comment
     use 'tpope/vim-commentary'
     -- surround
     use 'tpope/vim-surround'
-    -- ([{}])
-    use 'jiangmiao/auto-pairs'
     -- easymotion
     use 'easymotion/vim-easymotion'
     -- colorscheme
     use 'drewtempelmeyer/palenight.vim'
+    use 'rose-pine/neovim'
+    use 'dracula/vim'
     -- bufferline / tabline
     use {
         'romgrk/barbar.nvim',
@@ -34,8 +42,13 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = {'kyazdani42/nvim-web-devicons'}
     }
+    use 'windwp/nvim-autopairs'
     -- dashboard
     use 'glepnir/dashboard-nvim'
+    -- indent
+    use "lukas-reineke/indent-blankline.nvim"
+    -- which-key
+    use 'folke/which-key.nvim'
     -- lsp
     use {
         'neovim/nvim-lspconfig',
@@ -53,6 +66,8 @@ return require('packer').startup(function(use)
     use 'rafamadriz/friendly-snippets'
     -- lspkind
     use 'onsails/lspkind-nvim'
+    -- formatting
+    use 'jose-elias-alvarez/null-ls.nvim'
     -- ae ie as text object
     use 'kana/vim-textobj-user'
     use 'kana/vim-textobj-entire'

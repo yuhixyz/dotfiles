@@ -6,7 +6,11 @@ vim.api.nvim_command([[
 ]])
 
 -- colorscheme
-vim.cmd[[colorscheme palenight]]
+-- vim.cmd[[colorscheme palenight]]
+vim.cmd[[colorscheme rose-pine]]
+vim.cmd[[hi BufferOffset guibg=#fffff]]
+-- vim.cmd[[colorscheme dracula]]
 
 -- statusline
 require('lualine').setup()
+

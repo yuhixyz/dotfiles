@@ -11,6 +11,7 @@ local opt = {
     silent = true
 }
 
+-- keymap('n', '\'', '<Plug>(easymotion-prefix)', opt)
 -- escape
 keymap('i', 'jj', '<ESC>', opt)
 -- no hl
@@ -39,24 +40,8 @@ keymap('n', '<C-q>', ':BufferClose<CR>', opt)
 -- markdown preview
 keymap('n', '<Leader>gm', ':MarkdownPreview<CR>', opt)
 
--- fzf-lua
--- search files
-keymap('n', '<Leader>ff', ":FzfLua files<CR>", opt)
--- search recent files
-keymap('n', '<Leader>fh', ":FzfLua oldfiles<CR>", opt)
--- search lines in buffers
-keymap('n', '<Leader>fl', ":FzfLua lines<CR>", opt)
--- search marks
-keymap('n', '<Leader>fm', ":FzfLua marks<CR>", opt)
-
 -- dashboard
-keymap('n', '<Leader>fn', ':DashboardNewFile<CR>', opt)
-keymap('n', '<Leader>co', ':edit $MYVIMRC<CR>', opt)
-
--- file explorer: nvim-tree
--- keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', opt)
--- set offset for buffer
-keymap('n', '<Leader>e', ":lua require('plug-config.barbar').toggle()<CR>", opt)
+keymap('n', '<Leader>nf', ':DashboardNewFile<CR>', opt)
 
 -- easymotion
 -- s<char><char> or s<char><CR>
