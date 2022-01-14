@@ -42,7 +42,7 @@ local mappings = {
         a = {":FzfLua<cr>", "All Commands"},
         f = {":FzfLua files<cr>", "Find File"},
         h = {":FzfLua oldfiles<cr>", "Recent Files"},
-        l = {":FzfLua lines<cr>", "Recent Files"},
+        l = {":FzfLua lines<cr>", "Search Text in Buffers"},
         b = {":FzfLua marks<cr>", "Bookmarks"},
     },
     l = {
