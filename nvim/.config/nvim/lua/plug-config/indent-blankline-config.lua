@@ -1,3 +1,3 @@
-require("indent_blankline").setup {
-    filetype_exclude = {"dashboard", "NvimTree", "packer", "lsp-installer"},
-}
+require("indent_blankline").setup({
+	filetype_exclude = { "dashboard", "NvimTree", "packer", "lsp-installer" },
+})
