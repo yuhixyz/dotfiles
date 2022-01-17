@@ -36,6 +36,7 @@ local mappings = {
 		y = { ":e ~/.config/yabai/yabairc<cr>", "Edit yabai" },
 		s = { ":e ~/.config/skhd/skhdrc<cr>", "Edit skhd" },
 		b = { ":e ~/.config/sketchybar/sketchybarrc<cr>", "Edit sketchybar" },
+		z = { ":e ~/.zshrc<cr>", "Edit zsh" },
 	},
 	f = {
 		name = "FZF",
