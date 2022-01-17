@@ -77,7 +77,7 @@ unset __conda_setup
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || bat {}) 2> /dev/null | head -500'"
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --color 'bg+:#232136' --preview '(highlight -O ansi {} || bat {}) 2> /dev/null | head -500'"
 export FZF_COMPLETION_TRIGGER='\'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
