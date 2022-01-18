@@ -61,6 +61,11 @@ local mappings = {
 		N = { "<cmd>Lspsaga diagnostic_jump_prev<cr>", "Go To Prev Diagnostic" },
 		f = { "<cmd>lua vim.lsp.buf.formatting_sync()<cr>", "Code Formatting" },
 	},
+	z = {
+		name = "Zen Mode",
+		z = { ":ZenMode<cr>", "Zen Mode" },
+		t = { ":Twilight<cr>", "Twilight" },
+	},
 }
 
 local opts = { prefix = "<leader>" }

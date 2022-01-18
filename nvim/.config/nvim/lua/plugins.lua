@@ -14,6 +14,10 @@ end
 return require("packer").startup(function(use)
 	-- packer self
 	use("wbthomason/packer.nvim")
+	-- Lua
+	use("folke/zen-mode.nvim")
+	-- Lua
+	use("benstockil/twilight.nvim")
 	-- file explorer
 	use({
 		"kyazdani42/nvim-tree.lua",
