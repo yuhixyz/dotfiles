@@ -96,10 +96,16 @@ return require("packer").startup(function(use)
 		ft = { "markdown" },
 	})
 	-- fzf-lua
+	-- use({
+	-- 	"ibhagwan/fzf-lua",
+	-- 	requires = { "kyazdani42/nvim-web-devicons" },
+	-- })
+	-- telescope
 	use({
-		"ibhagwan/fzf-lua",
-		requires = { "kyazdani42/nvim-web-devicons" },
+		"nvim-telescope/telescope.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
 	})
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	-- terminal
 	-- use 'voldikss/vim-floaterm'
 	use("akinsho/toggleterm.nvim")
