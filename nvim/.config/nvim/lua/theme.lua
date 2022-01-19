@@ -6,13 +6,16 @@ vim.api.nvim_command([[
 ]])
 
 -- colorscheme
--- vim.cmd[[colorscheme palenight]]
 vim.cmd([[
-    colorscheme rose-pine
+    colorscheme nord
     hi BufferOffset guibg=#f
     hi BufferTabpageFill guibg=#f
 ]])
+-- vim.cmd[[colorscheme palenight]]
 -- vim.cmd[[colorscheme dracula]]
-
 -- statusline
-require("lualine").setup()
+require("lualine").setup({
+	options = {
+		theme = "nord",
+	},
+})

@@ -13,6 +13,7 @@ end
 
 return require("packer").startup(function(use)
 	-- packer self
+    use "arcticicestudio/nord-vim"
 	use("wbthomason/packer.nvim")
 	-- Lua
 	use("folke/zen-mode.nvim")
