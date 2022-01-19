@@ -13,7 +13,6 @@ end
 
 return require("packer").startup(function(use)
 	-- packer self
-    use "arcticicestudio/nord-vim"
 	use("wbthomason/packer.nvim")
 	-- Lua
 	use("folke/zen-mode.nvim")
@@ -42,6 +41,7 @@ return require("packer").startup(function(use)
 	-- use 'easymotion/vim-easymotion'
 	use("justinmk/vim-sneak")
 	-- colorscheme
+	use("arcticicestudio/nord-vim")
 	use("drewtempelmeyer/palenight.vim")
 	use("rose-pine/neovim")
 	use("dracula/vim")
