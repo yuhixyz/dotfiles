@@ -42,6 +42,7 @@ return require("packer").startup(function(use)
 	use("justinmk/vim-sneak")
 	-- colorscheme
 	use("arcticicestudio/nord-vim")
+	use("EdenEast/nightfox.nvim")
 	use("drewtempelmeyer/palenight.vim")
 	use("rose-pine/neovim")
 	use("dracula/vim")

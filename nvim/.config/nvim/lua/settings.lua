@@ -33,3 +33,4 @@ end
 
 vim.opt.iskeyword:append("-") -- Treat dash separated words as a word text object
 vim.opt.formatoptions:remove("cro") -- Stop newline continution of comments
+
