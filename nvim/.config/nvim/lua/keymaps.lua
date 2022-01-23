@@ -15,3 +15,6 @@ keymap("n", "L", ":bnext<CR>", opt)
 -- write / quit
 keymap("n", "W", ":w<CR>", opt)
 keymap("n", "Q", ":q<CR>", opt)
+
+keymap("n", "glt", ":VimwikiToggleListItem<CR>", opt)
+

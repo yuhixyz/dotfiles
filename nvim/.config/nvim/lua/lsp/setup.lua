@@ -7,7 +7,7 @@ local servers = {
 	sumneko_lua = require("lsp.lua"), -- /lua/lsp/lua.lua
 	pyright = require("lsp.python"),
 	zk = require("lsp.markdown"),
-    clangd = require("lsp.cpp"),
+    -- clangd = require("lsp.cpp"),
 	rust_analyzer = require("lsp.rust"),
 }
 
