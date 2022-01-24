@@ -5,8 +5,8 @@ window:
   dynamic_padding: false
   decorations: buttonless
   padding:
-    x: 6
-    y: 9
+    x: 5
+    y: 11 
 
 font:
   normal:
