@@ -3,10 +3,10 @@ env:
 
 window:
   dynamic_padding: false
-  decorations: transparent
+  decorations: buttonless
   padding:
     x: 6
-    y: 28
+    y: 9
 
 font:
   normal:
