@@ -20,8 +20,6 @@ zinit ice lucid wait='0'
 zinit light zsh-users/zsh-completions
 # conda completions
 zinit light esc/conda-zsh-completion
-# autojump
-zinit snippet OMZ::plugins/autojump/autojump.plugin.zsh
 # setup fzf
 if [[ ! -d $(brew --prefix)/opt/fzf ]]; then
     brew install fzf
@@ -91,3 +89,5 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 zinit ice depth=1
 zinit light jeffreytse/zsh-vi-mode
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
+# arch -arm64 brew install z 
+source /opt/homebrew/etc/profile.d/z.sh
