@@ -7,7 +7,7 @@ window:
   padding:
     x: 5
     y: 11 
-
+  opacity: 0.96
 font:
   normal:
     family: Hack Nerd Font Mono
@@ -27,9 +27,6 @@ font:
 
   size: 15.0
   use_thin_strokes: true
-
-background_opacity: 0.96
-
 
 # rose-pine-moon
 colors:
