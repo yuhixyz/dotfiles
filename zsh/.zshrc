@@ -22,6 +22,9 @@ zinit light zsh-users/zsh-completions
 zinit light esc/conda-zsh-completion
 # autojump
 zinit snippet OMZ::plugins/autojump/autojump.plugin.zsh
+# zsh vi mode
+zinit ice depth=1
+zinit light jeffreytse/zsh-vi-mode
 # setup fzf
 if [[ ! -d $(brew --prefix)/opt/fzf ]]; then
     brew install fzf
