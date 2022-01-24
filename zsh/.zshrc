@@ -1,30 +1,11 @@
 export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+export EDITOR=/opt/homebrew/bin/nvim
+export RANGER_LOAD_DEFAULT_RC=FALSE
+export TERM=xterm-256color
 
-# setup zinit 
-if [[ ! -f /opt/homebrew/opt/zinit/zinit.zsh ]]; then
-    brew install zinit
-fi
-# load zinit
-source /opt/homebrew/opt/zinit/zinit.zsh
+# z
+source /opt/homebrew/etc/profile.d/z.sh
 
-
-# plugins
-# syntax highlight
-zinit ice lucid wait='0' atinit='zpcompinit'
-zinit light zdharma-continuum/fast-syntax-highlighting
-# suggestions
-zinit ice lucid wait='0' atload='_zsh_autosuggest_start'
-zinit light zsh-users/zsh-autosuggestions
-# zsh completions
-zinit ice lucid wait='0'
-zinit light zsh-users/zsh-completions
-# conda completions
-zinit light esc/conda-zsh-completion
-# setup fzf
-if [[ ! -d $(brew --prefix)/opt/fzf ]]; then
-    brew install fzf
-    $(brew --prefix)/opt/fzf/install
-fi
 # alias
 alias szsh='source ~/.zshrc'
 alias lg='lazygit'
@@ -53,8 +34,6 @@ tm() {
   session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --exit-0) &&  tmux $change -t "$session" || echo "No sessions found."
 }
 
-export TERM=xterm-256color
-
 # https://github.com/conda-forge/miniforge/#download
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -74,20 +53,42 @@ unset __conda_setup
 # case insensitive completion
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
+# setup fzf
+if [[ ! -d $(brew --prefix)/opt/fzf ]]; then
+    brew install fzf
+    $(brew --prefix)/opt/fzf/install
+fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || bat {}) 2> /dev/null | head -500'"
 export FZF_COMPLETION_TRIGGER='\'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
-eval $(thefuck --alias)
-# starship
-# macos: brew install starship
-eval "$(starship init zsh)"
-export EDITOR=/opt/homebrew/bin/nvim
-export RANGER_LOAD_DEFAULT_RC=FALSE
-# zvm
+
+# setup zinit 
+if [[ ! -f /opt/homebrew/opt/zinit/zinit.zsh ]]; then
+    brew install zinit
+fi
+# load zinit
+source /opt/homebrew/opt/zinit/zinit.zsh
+# plugins
+# zsh completions
+zinit ice lucid wait='0'
+zinit light zsh-users/zsh-completions
+# syntax highlight
+zinit ice lucid wait='0' atinit='zpcompinit'
+zinit light zdharma-continuum/fast-syntax-highlighting
+# suggestions
+zinit ice lucid wait='0' atload='_zsh_autosuggest_start'
+zinit light zsh-users/zsh-autosuggestions
+# conda completions
+zinit light esc/conda-zsh-completion
+# zshvimode
 zinit ice depth=1
 zinit light jeffreytse/zsh-vi-mode
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
-# arch -arm64 brew install z 
-source /opt/homebrew/etc/profile.d/z.sh
+
+# thefuck
+eval $(thefuck --alias)
+
+# starship
+eval "$(starship init zsh)"
