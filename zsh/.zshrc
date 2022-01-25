@@ -5,7 +5,14 @@ export TERM=xterm-256color
 
 # z
 source /opt/homebrew/etc/profile.d/z.sh
+# zsh completion
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
+  autoload -Uz compinit
+  compinit
+fi
 # alias
 alias szsh='source ~/.zshrc'
 alias lg='lazygit'
