@@ -59,7 +59,7 @@ return require("packer").startup(function(use)
 	-- dashboard
 	use("glepnir/dashboard-nvim")
 	-- indent
-	use("lukas-reineke/indent-blankline.nvim")
+	-- use("lukas-reineke/indent-blankline.nvim")
 	-- which-key
 	use("folke/which-key.nvim")
 	-- lsp
