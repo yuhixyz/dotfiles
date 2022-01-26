@@ -3,8 +3,15 @@ export EDITOR=/opt/homebrew/bin/nvim
 export RANGER_LOAD_DEFAULT_RC=FALSE
 export TERM=xterm-256color
 
-# z
-source /opt/homebrew/etc/profile.d/z.sh
+# setup fzf
+if [[ ! -d $(brew --prefix)/opt/fzf ]]; then
+    brew install fzf
+    $(brew --prefix)/opt/fzf/install
+fi
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --color=fg:#908caa,bg:#232136,hl:#ea9a97 --color=fg+:#e0def4,bg+:#393552,hl+:#eb6f92 --color=info:#56526e,prompt:#f6c177,pointer:#eb6f92 --color=marker:#9ccfd8,spinner:#56526e,header:#56526e"
+export FZF_COMPLETION_TRIGGER='\'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
 # zsh completion
 if type brew &>/dev/null
 then
@@ -24,6 +31,9 @@ alias ls='exa -h'
 alias la='ls -a'
 alias ll='ls -al'
 alias mkdir='mkdir -p'
+# z.lua
+alias zh='z -I -t .' # path history fzf
+alias zf='z -I' # path fzf
 # tmux
 alias tls='tmux ls'
 alias tks='tmux kill-session -t'
@@ -60,15 +70,6 @@ unset __conda_setup
 # case insensitive completion
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
-# setup fzf
-if [[ ! -d $(brew --prefix)/opt/fzf ]]; then
-    brew install fzf
-    $(brew --prefix)/opt/fzf/install
-fi
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || bat {}) 2> /dev/null | head -500'"
-export FZF_COMPLETION_TRIGGER='\'
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 
 # setup zinit 
@@ -92,8 +93,13 @@ zinit light esc/conda-zsh-completion
 # zshvimode
 zinit ice depth=1
 zinit light jeffreytse/zsh-vi-mode
-ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
-
+function zvm_config() {
+  ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
+  ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
+}
+zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh')
+# z.lua
+zinit light skywind3000/z.lua
 # thefuck
 eval $(thefuck --alias)
 
