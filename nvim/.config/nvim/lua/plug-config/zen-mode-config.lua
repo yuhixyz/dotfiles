@@ -3,11 +3,11 @@ require("zen-mode").setup({
 		backdrop = 1,
 		width = 0.85,
 		height = 1,
-		options = { signcolumn = "no", number = false, cursorline = false },
+		options = { signcolumn = "no", number = true, relativenumber = false, cursorline = true },
 	},
 	plugins = {
 		options = { enabled = true, ruler = false, showcmd = false },
-		twilight = { enabled = true },
+		twilight = { enabled = false },
 		tmux = { enabled = false },
 	},
 })
