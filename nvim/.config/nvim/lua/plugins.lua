@@ -97,6 +97,8 @@ return require("packer").startup(function(use)
 		end,
 		ft = { "markdown" },
 	})
+    -- set root in the runtime
+	use({ "nyngwang/NeoRoot.lua" })
 	-- fzf-lua
 	use({
 		"ibhagwan/fzf-lua",
