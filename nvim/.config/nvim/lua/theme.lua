@@ -1,7 +1,7 @@
 -- set transparent background
-vim.api.nvim_command([[
-    autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
-]])
+-- vim.api.nvim_command([[
+--     autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
+-- ]])
 
 -- lualine
 require("lualine").setup({
