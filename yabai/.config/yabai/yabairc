@@ -17,6 +17,11 @@ yabai -m rule --add app="^WeChat$" space=4
 yabai -m rule --add app="^WeCom$" space=4
 yabai -m rule --add app="^YesPlayMusic$" space=5
 
+# window opacity
+yabai -m config window_opacity on
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 0.9
+
 # general settings
 yabai -m config layout                       bsp
 yabai -m config top_padding                  30
