@@ -18,3 +18,5 @@ keymap("n", "Q", ":q<CR>", opt)
 
 keymap("n", "glt", ":VimwikiToggleListItem<CR>", opt)
 
+local NOREF_NOERR_TRUNC = { noremap = true, silent = true, nowait = true }
+keymap("n", "<Leader>p", ":NeoRootSwitchMode<cr>", NOREF_NOERR_TRUNC)
