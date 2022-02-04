@@ -50,6 +50,10 @@ tm() {
   fi
   session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --exit-0) &&  tmux $change -t "$session" || echo "No sessions found."
 }
+mkcd() {
+    mkdir -p "$1"
+    cd "$1"
+}
 
 # https://github.com/conda-forge/miniforge/#download
 # >>> conda initialize >>>
