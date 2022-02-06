@@ -8,7 +8,7 @@ local sources = {
 		extra_args = { "-style", "{IndentWidth: 4}" },
 	}), -- c/c++/cs/java
 	null_ls.builtins.formatting.stylua, -- lua
-	null_ls.builtins.formatting.rustfmt, -- rust
+	-- null_ls.builtins.formatting.rustfmt, -- rust
 }
 
 null_ls.setup({ sources = sources })
