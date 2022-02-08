@@ -100,22 +100,20 @@ return require("packer").startup(function(use)
     -- set root in the runtime
 	use({ "nyngwang/NeoRoot.lua" })
 	-- fzf-lua
-	use({
-		"ibhagwan/fzf-lua",
-		requires = { "kyazdani42/nvim-web-devicons" },
-	})
-	-- telescope
 	-- use({
-	-- 	"nvim-telescope/telescope.nvim",
-	-- 	requires = { "nvim-lua/plenary.nvim" },
+	-- 	"ibhagwan/fzf-lua",
+	-- 	requires = { "kyazdani42/nvim-web-devicons" },
 	-- })
-	-- use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	-- telescope
+	use({
+		"nvim-telescope/telescope.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+	})
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	-- terminal
-	-- use 'voldikss/vim-floaterm'
 	use("akinsho/toggleterm.nvim")
 	-- vimwiki
 	use("vimwiki/vimwiki")
-	-- use("tools-life/taskwiki")
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
