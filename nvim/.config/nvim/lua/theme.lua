@@ -33,12 +33,12 @@ vim.g.rose_pine_colors = {
 
 	-- Or set all headings to one colour: `headings = p.text`
 	headings = {
-		h1 = p.iris,
-		h2 = p.foam,
-		h3 = p.rose,
-		h4 = p.gold,
-		h5 = p.pine,
-		h6 = p.foam,
+		h1 = p.foam,
+		h2 = p.love,
+		h3 = p.gold,
+		h4 = p.rose,
+		h5 = p.iris,
+		h6 = p.pine,
 	},
 }
 
