@@ -8,3 +8,6 @@ vim.g.vimwiki_list = {
 }
 vim.g.vimwiki_markdown_link_ext = 1
 vim.g.vimwiki_conceallevel = 2
+vim.cmd([[
+    autocmd FileType vimwiki setlocal shiftwidth=2 tabstop=2 
+]])
