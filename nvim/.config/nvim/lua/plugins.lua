@@ -31,7 +31,7 @@ return require("packer").startup(function(use)
 		run = ":TSUpdate",
 	})
 	use("p00f/nvim-ts-rainbow")
-	use("windwp/nvim-ts-autotag")
+	-- use("windwp/nvim-ts-autotag")
 	use("windwp/nvim-autopairs")
 	-- comment
 	use("tpope/vim-commentary")
