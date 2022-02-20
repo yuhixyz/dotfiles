@@ -60,15 +60,15 @@ sketchybar -m --add space code left                              \
                          icon=􀃓                            \
                          icon.highlight_color=0xffffad33         \
                          label=music                              \
-                         click_script="yabai -m space --focus 5" 
-                                                                 # \
-              # --add space video left                               \
-              # --set video associated_space=6                      \
-                         # associated_display=1                    \
-                         # icon=􀃕                                 \
-                         # icon.highlight_color=0xffff80bf         \
-                         # label=video                              \
-                         # click_script="yabai -m space --focus 6" 
+                         click_script="yabai -m space --focus 5" \
+                                                                 \
+              --add space game left                               \
+              --set game associated_space=6                      \
+                         associated_display=1                    \
+                         icon=􀃕                                 \
+                         icon.highlight_color=0xffff80bf         \
+                         label=game                              \
+                         click_script="yabai -m space --focus 6" 
 
 ############## ITEM DEFAULTS ###############
 sketchybar -m --default label.padding_left=2  \
