@@ -22,12 +22,14 @@ wk.setup({
 })
 
 local mappings = {
-	e = { ":lua require('plug-config.barbar-config').toggle()<CR>", "Open Explorer" },
+	e = { ":ModNvimTreeFindFileToggle<cr>", "Open Explorer" },
 	x = { ":BufferClose<cr>", "Close Current Buffer" },
 	h = { ":set hlsearch!<cr>", "Toggle Highlight" },
 	m = { ":MarkdownPreview<cr>", "Markdown Preview" },
+	p = { ":NeoRootSwitchMode<cr>", "Switch Root" },
 	w = {
 		name = "Vimwiki",
+		l = { ":VimwikiToggleListItem<cr>", "Toggle List Item" },
 	},
 	c = {
 		name = "Config",

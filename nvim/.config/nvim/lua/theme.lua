@@ -11,37 +11,39 @@ require("lualine").setup({
 })
 
 -- colorschene: rose-pine
--- Set theme variant
--- Matches terminal theme if unset
--- @usage 'main' | 'moon' | 'dawn'
-vim.g.rose_pine_variant = "moon"
+require("rose-pine").setup({
+	---@usage 'main'|'moon'
+	dark_variant = "moon",
+	bold_vert_split = false,
+	dim_nc_background = false,
+	disable_background = false,
+	disable_float_background = false,
+	disable_italics = false,
+	---@usage string hex value or named color from rosepinetheme.com/palette
+	groups = {
+		border = "highlight_med",
+		comment = "muted",
+		link = "iris",
+		punctuation = "subtle",
 
-vim.g.rose_pine_bold_vertical_split_line = false
-vim.g.rose_pine_inactive_background = false
-vim.g.rose_pine_disable_background = false
-vim.g.rose_pine_disable_float_background = false
-vim.g.rose_pine_disable_italics = false
+		error = "love",
+		hint = "iris",
+		info = "foam",
+		warn = "gold",
 
-local p = require("rose-pine.palette")
-vim.g.rose_pine_colors = {
-	punctuation = p.subtle,
-	comment = p.subtle,
-	hint = p.iris,
-	info = p.foam,
-	warn = p.gold,
-	error = p.love,
-
-	-- Or set all headings to one colour: `headings = p.text`
-	headings = {
-		h1 = p.foam,
-		h2 = p.love,
-		h3 = p.gold,
-		h4 = p.rose,
-		h5 = p.iris,
-		h6 = p.pine,
+		headings = {
+			h1 = "foam",
+			h2 = "love",
+			h3 = "gold",
+			h4 = "rose",
+			h5 = "iris",
+			h6 = "pine",
+		},
 	},
-}
+})
 
+-- set colorscheme after options
+vim.cmd("colorscheme rose-pine")
 -- Set colorscheme after options
 vim.cmd([[
     colorscheme rose-pine

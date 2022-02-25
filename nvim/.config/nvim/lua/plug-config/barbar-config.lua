@@ -1,18 +1,10 @@
 -- set offset for barbar
 -- https://github.com/romgrk/barbar.nvim/issues/177
-local tree = {}
-local g = vim.g
--- Explicitly set the nvim tree width
-g.nvim_tree_width = 30
-local tree_width = g.nvim_tree_width
-tree.toggle = function()
-	require("nvim-tree").toggle()
-	if require("nvim-tree.view").win_open() then
-		require("bufferline.state").set_offset(tree_width + 1, "File Explorer")
-		require("nvim-tree").find_file(true)
-	else
-		require("bufferline.state").set_offset(0)
-	end
-end
+local tree_toggle_cmd = ":lua local set_bar_offset = require('bufferline.state').set_offset \z
+                         local nt = require('nvim-tree') \z
+                         local ntv = require('nvim-tree.view') \z
+                         if ntv.is_visible() then \z
+                         set_bar_offset(0) nt.toggle() else \z
+                         nt.toggle(true) set_bar_offset(ntv.View.width, 'NvimTree') end"
 
-return tree
+vim.cmd ("command ModNvimTreeFindFileToggle " .. tree_toggle_cmd)
