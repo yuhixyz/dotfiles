@@ -1,4 +1,6 @@
-# from: https://github.com/Mopip77/dotfile/blob/main/tag-yabai/skhdrc
+# https://sw.kovidgoyal.net/kitty/invocation/?highlight=directory#cmdoption-kitty-single-instancehttps://sw.kovidgoyal.net/kitty/invocation/?highlight=directory#cmdoption-kitty-single-instance
+# kitty new os window
+shift + alt - return : kitty --single-instance --working-directory ~
 
 # focus window
 alt - h : yabai -m window --focus west
@@ -14,14 +16,6 @@ shift + alt - l : yabai -m window --swap east
 
 # balance size of windows
 shift + alt - 0 : yabai -m space --balance
-
-# create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
-alt - c : ~/.config/yabai/create_new_space.sh 1
-
-# destroy desktop and goto recent space
-alt - w : index="$(yabai -m query --spaces --space | jq '.index')" && \
-                yabai -m space --focus recent && \
-                yabai -m space "${index}" --destroy
 
 # fast focus desktop
 alt - tab : yabai -m space --focus recent
@@ -39,21 +33,21 @@ alt - 9 : yabai -m space --focus 9
 alt - 0 : yabai -m space --focus 10
 
 # move focus window to space <number> and change space focus
+# move focus window to next space or prev space and change space focus
 shift + alt - 1 : yabai -m window --space 1 && yabai -m space --focus 1
 shift + alt - 2 : yabai -m window --space 2 && yabai -m space --focus 2
 shift + alt - 3 : yabai -m window --space 3 && yabai -m space --focus 3
 shift + alt - 4 : yabai -m window --space 4 && yabai -m space --focus 4
 shift + alt - 5 : yabai -m window --space 5 && yabai -m space --focus 5
 shift + alt - 6 : yabai -m window --space 6 && yabai -m space --focus 6
+shift + alt - n : (yabai -m window --space next || yabai -m window --space first) && (yabai -m space --focus next || yabai -m space --focus first)
+shift + alt - p : (yabai -m window --space prev || yabai -m window --space last) && (yabai -m space --focus prev || yabai -m space --focus last)
 
 # rotate tree
 alt - r : yabai -m space --rotate 90
 
 # mirror tree y-axis
 alt - y : yabai -m space --mirror y-axis
-
-# mirror tree x-axis
-# alt - x : yabai -m space --mirror x-axis
 
 # toggle window fullscreen zoom
 alt - f : yabai -m window --toggle zoom-fullscreen
@@ -68,13 +62,7 @@ shift + alt - b : yabai -m window --toggle border
 alt - e : yabai -m window --toggle split
 
 # float / unfloat window and center on screen
-#alt - t : yabai -m window --toggle float;\
-          #yabai -m window --grid 4:4:1:1:2:2
 alt - t : ~/.config/yabai/toggle-window-floating-tiling.sh
-
-# toggle sticky (show on all spaces)
-# alt - s : yabai -m window --toggle sticky
-
 
 # change layout of desktop
 ctrl + alt - a : yabai -m space --layout bsp
