@@ -15,14 +15,13 @@ yabai -m config normal_window_border_color  '0xff6e6a86'
 
 yabai -m config auto_balance on
 # set focus follows mouse mode (default: off, options: off, autoraise, autofocus)
-yabai -m config focus_follows_mouse autofocus
+# yabai -m config focus_follows_mouse autofocus
 # modify window shadows (default: on, options: on, off, float)
 # example: show shadows only for floating windows
 yabai -m config window_shadow float
 
 apps='^(kitty|Google Chrome|PDF Expert|WPS Office|Code)$'
 yabai -m rule --add app!="${apps}" manage=off border=off
-# yabai -m rule --add app="${apps}" border=on
 yabai -m rule --add app="^WPS Office$" space=2
 yabai -m rule --add app="^PDF Expert$" space=2
 yabai -m rule --add app="^QQ$" space=4
@@ -39,8 +38,8 @@ yabai -m config normal_window_opacity 0.90
 
 # general settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  30
-yabai -m config bottom_padding               7
+yabai -m config top_padding                  5
+yabai -m config bottom_padding               30
 yabai -m config left_padding                 5
 yabai -m config right_padding                5
 yabai -m config window_gap                   6

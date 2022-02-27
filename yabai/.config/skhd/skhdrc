@@ -34,14 +34,16 @@ alt - 0 : yabai -m space --focus 10
 
 # move focus window to space <number> and change space focus
 # move focus window to next space or prev space and change space focus
-shift + alt - 1 : yabai -m window --space 1 && yabai -m space --focus 1
-shift + alt - 2 : yabai -m window --space 2 && yabai -m space --focus 2
-shift + alt - 3 : yabai -m window --space 3 && yabai -m space --focus 3
-shift + alt - 4 : yabai -m window --space 4 && yabai -m space --focus 4
-shift + alt - 5 : yabai -m window --space 5 && yabai -m space --focus 5
-shift + alt - 6 : yabai -m window --space 6 && yabai -m space --focus 6
-shift + alt - n : (yabai -m window --space next || yabai -m window --space first) && (yabai -m space --focus next || yabai -m space --focus first)
-shift + alt - p : (yabai -m window --space prev || yabai -m window --space last) && (yabai -m space --focus prev || yabai -m space --focus last)
+# bug: border don't follow window when move a window to another space
+# tricky fix: execute "yabai -m window --toggle border" twice, then the border will appear again.
+shift + alt - 1 : yabai -m window --space 1 && yabai -m space --focus 1 && yabai -m window --toggle border && yabai -m window --toggle border
+shift + alt - 2 : yabai -m window --space 2 && yabai -m space --focus 2 && yabai -m window --toggle border && yabai -m window --toggle border
+shift + alt - 3 : yabai -m window --space 3 && yabai -m space --focus 3 && yabai -m window --toggle border && yabai -m window --toggle border
+shift + alt - 4 : yabai -m window --space 4 && yabai -m space --focus 4 && yabai -m window --toggle border && yabai -m window --toggle border
+shift + alt - 5 : yabai -m window --space 5 && yabai -m space --focus 5 && yabai -m window --toggle border && yabai -m window --toggle border
+shift + alt - 6 : yabai -m window --space 6 && yabai -m space --focus 6 && yabai -m window --toggle border && yabai -m window --toggle border
+shift + alt - n : (yabai -m window --space next || yabai -m window --space first) && (yabai -m space --focus next || yabai -m space --focus first) && yabai -m window --toggle border && yabai -m window --toggle border
+shift + alt - p : (yabai -m window --space prev || yabai -m window --space last) && (yabai -m space --focus prev || yabai -m space --focus last) && yabai -m window --toggle border && yabai -m window --toggle border
 
 # rotate tree
 alt - r : yabai -m space --rotate 90
