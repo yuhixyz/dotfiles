@@ -9,9 +9,9 @@ yabai -m signal --add event=window_title_changed action="sketchybar -m --trigger
 
 # yabai border
 yabai -m config window_border               on
-yabai -m config window_border_width         5
-yabai -m config active_window_border_color  '0xffc4a7e7'
-yabai -m config normal_window_border_color  '0xff6e6a86'
+yabai -m config window_border_width         3
+yabai -m config active_window_border_color  '0xfff6c177'
+yabai -m config normal_window_border_color  '0xff908caa'
 
 yabai -m config auto_balance on
 # set focus follows mouse mode (default: off, options: off, autoraise, autofocus)
