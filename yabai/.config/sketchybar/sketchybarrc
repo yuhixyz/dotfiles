@@ -32,14 +32,14 @@ sketchybar --add space code left                              \
            --set code associated_space=1                      \
                       associated_display=1                    \
                       icon=􀃋                                  \
-                      icon.highlight_color=0xffb380ff         \
+                      icon.highlight_color=0xffc4a7e7         \
                       label=code                              \
                       click_script="yabai -m space --focus 1" \
                                                               \
            --add space research left                          \
            --set research  associated_space=2                 \
                       associated_display=1                    \
-                      icon.highlight_color=0xff66a3ff         \
+                      icon.highlight_color=0xffeb6f92         \
                       icon=􀃍                                  \
                       label=research                          \
                       click_script="yabai -m space --focus 2" \
@@ -48,7 +48,7 @@ sketchybar --add space code left                              \
            --set surf associated_space=3                      \
                       associated_display=1                    \
                       icon=􀃏                                  \
-                      icon.highlight_color=0xff33cc33         \
+                      icon.highlight_color=0xfff6c177         \
                       label=surf                              \
                       click_script="yabai -m space --focus 3" \
                                                               \
@@ -56,7 +56,7 @@ sketchybar --add space code left                              \
            --set social associated_space=4                    \
                       associated_display=1                    \
                       icon=􀃑                                  \
-                      icon.highlight_color=0xff00e5e6         \
+                      icon.highlight_color=0xffea9a97         \
                       label=social                            \
                       click_script="yabai -m space --focus 4" \
                                                               \
@@ -64,7 +64,7 @@ sketchybar --add space code left                              \
            --set music associated_space=5                     \
                       associated_display=1                    \
                       icon=􀃓                                  \
-                      icon.highlight_color=0xffffad33         \
+                      icon.highlight_color=0xff3e8fb0         \
                       label=music                             \
                       click_script="yabai -m space --focus 5" \
                                                               \
@@ -72,32 +72,10 @@ sketchybar --add space code left                              \
            --set game associated_space=6                      \
                       associated_display=1                    \
                       icon=􀃕                                  \
-                      icon.highlight_color=0xffff80bf         \
+                      icon.highlight_color=0xff9ccfd8         \
                       label=game                              \
                       click_script="yabai -m space --focus 6" 
 
-############## ITEM DEFAULTS ###############
-sketchybar --default label.padding_left=  \
-                     icon.padding_right=4  \
-                     icon.padding_left=6   \
-                     label.padding_right=6
-
-############## RIGHT ITEMS ############## 
-sketchybar --add item clock right                                                                   \
-           --set clock update_freq=10                                                               \
-                       script="~/.config/sketchybar/plugins/clock.sh"                               
-                                                                                                    
-sketchybar --add item battery right            \
-           --set battery update_freq=30        \
-                         icon=                \
-                         script="~/.config/sketchybar/plugins/power.sh"
-
-sketchybar --add item mailIndicator right                                                           \
-           --set mailIndicator update_freq=30                                                       \
-                               icon=                                                               \
-                               script="~/.config/sketchybar/plugins/mailIndicator.sh"               \
-                               click_script="osascript -e 'tell application \"Mail\" to activate'"  
-                                                                                                       
 # https://github.com/FelixKratz/SketchyBar/discussions/12#discussioncomment-1215932
 sketchybar --add event window_focus \
            --add event title_change
@@ -105,7 +83,26 @@ sketchybar --add event window_focus \
 # window title
 sketchybar --add item title left \
            --set title script="~/.config/sketchybar/plugins/window_title.sh" \
+                       label.padding_left=4 
            --subscribe title window_focus front_app_switched space_change title_change
+
+############## ITEM DEFAULTS ###############
+sketchybar --default label.padding_left=0  \
+                     icon.padding_right=6  \
+                     icon.padding_left=8   \
+                     label.padding_right=6
+
+############## RIGHT ITEMS ############## 
+sketchybar --add item clock right                                                                   \
+           --set clock update_freq=10                                                               \
+                       icon=􀉉                                                                       \
+                       script="~/.config/sketchybar/plugins/clock.sh"                               
+                                                                                                    
+sketchybar --add item battery right            \
+           --set battery update_freq=30        \
+                         icon=                \
+                         script="~/.config/sketchybar/plugins/power.sh"
+
 
 ############## FINALIZING THE SETUP ##############
 sketchybar --update
