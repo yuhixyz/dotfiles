@@ -83,7 +83,7 @@ sketchybar --add event window_focus \
 # window title
 sketchybar --add item title left \
            --set title script="~/.config/sketchybar/plugins/window_title.sh" \
-                       label.padding_left=4 
+                       label.padding_left=4                                  \
            --subscribe title window_focus front_app_switched space_change title_change
 
 ############## ITEM DEFAULTS ###############
