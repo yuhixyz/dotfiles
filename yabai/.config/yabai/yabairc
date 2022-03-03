@@ -9,7 +9,7 @@ yabai -m signal --add event=window_title_changed action="sketchybar -m --trigger
 
 # yabai border
 yabai -m config window_border               on
-yabai -m config window_border_width         3
+yabai -m config window_border_width         4
 yabai -m config active_window_border_color  '0xfff6c177'
 yabai -m config normal_window_border_color  '0xff908caa'
 
@@ -21,7 +21,7 @@ yabai -m config auto_balance on
 yabai -m config window_shadow float
 
 apps='^(kitty|Google Chrome|PDF Expert|WPS Office|Code)$'
-yabai -m rule --add app!="${apps}" manage=off border=off
+yabai -m rule --add app!="${apps}" manage=off
 yabai -m rule --add app="^WPS Office$" space=2
 yabai -m rule --add app="^PDF Expert$" space=2
 yabai -m rule --add app="^QQ$" space=4
