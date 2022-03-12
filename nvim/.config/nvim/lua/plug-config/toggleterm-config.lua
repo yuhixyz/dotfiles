@@ -17,7 +17,7 @@ require("toggleterm").setup({
 		-- see :h nvim_open_win for details on borders however
 		-- the 'curved' border is a custom border type
 		-- not natively supported but implemented in this plugin.
-		border = "curved", -- 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
+		border = "single", -- 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
 		-- width = <value>,
 		-- height = <value>,
 		-- winblend = 3,
