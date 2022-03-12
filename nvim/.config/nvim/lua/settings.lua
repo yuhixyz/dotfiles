@@ -36,5 +36,5 @@ vim.opt.formatoptions:remove("cro") -- Stop newline continution of comments
 
 -- auto change input method to US when leaving insert mode
 vim.cmd([[
-    autocmd InsertLeave * :silent !/usr/local/bin/im-select com.apple.keylayout.US
+    autocmd InsertLeave * :silent !im-select com.apple.keylayout.US
 ]])
