@@ -1,7 +1,3 @@
-# https://sw.kovidgoyal.net/kitty/invocation/?highlight=directory#cmdoption-kitty-single-instancehttps://sw.kovidgoyal.net/kitty/invocation/?highlight=directory#cmdoption-kitty-single-instance
-# kitty new os window
-shift + alt - return : kitty --single-instance --working-directory ~
-
 # focus window
 alt - h : yabai -m window --focus west
 alt - j : yabai -m window --focus south
@@ -14,11 +10,11 @@ ctrl + alt - j : yabai -m window --resize top:0:20 || yabai -m window --resize b
 ctrl + alt - k : yabai -m window --resize top:0:-20 || yabai -m window --resize bottom:0:-20
 ctrl + alt - l : yabai -m window --resize left:20:0 || yabai -m window --resize right:20:0
 
-# swap window
-shift + alt - h : yabai -m window --swap west
-shift + alt - j : yabai -m window --swap south
-shift + alt - k : yabai -m window --swap north
-shift + alt - l : yabai -m window --swap east
+# wrap window
+shift + alt - h : yabai -m window --warp west
+shift + alt - j : yabai -m window --warp south
+shift + alt - k : yabai -m window --warp north
+shift + alt - l : yabai -m window --warp east
 
 # balance size of windows
 alt - b: yabai -m space --balance
