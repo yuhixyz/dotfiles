@@ -20,7 +20,7 @@ yabai -m config auto_balance on
 # example: show shadows only for floating windows
 yabai -m config window_shadow float
 
-apps='^(kitty|Google Chrome|PDF Expert|WPS Office|Code|Microsoft Word|Microsoft Excel|Microsoft PowerPoint)$'
+apps='^(爱奇艺|kitty|Google Chrome|PDF Expert|WPS Office|Code|Microsoft Word|Microsoft Excel|Microsoft PowerPoint)$'
 yabai -m rule --add app!="${apps}" manage=off border=off
 yabai -m rule --add app="^WPS Office$" space=2
 yabai -m rule --add app="^PDF Expert$" space=2
@@ -33,6 +33,7 @@ yabai -m rule --add app="^WeChat$" space=4
 yabai -m rule --add app="^WeCom$" space=4
 yabai -m rule --add app="^YesPlayMusic$" space=5
 yabai -m rule --add app="^Steam$" space=6
+yabai -m rule --add app="^爱奇艺$" space=3
 
 # window opacity
 yabai -m config window_opacity off
