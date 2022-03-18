@@ -5,7 +5,7 @@ local keymap = vim.api.nvim_set_keymap
 local opt = { noremap = true, silent = true }
 
 -- escape
-keymap("i", "jj", "<ESC>", opt)
+-- keymap("i", "jj", "<ESC>", opt)
 -- better indenting
 keymap("v", "<", "<gv", opt)
 keymap("v", ">", ">gv", opt)
