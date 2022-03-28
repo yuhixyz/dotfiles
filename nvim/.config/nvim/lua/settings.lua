@@ -24,7 +24,7 @@ local options = {
 	number = true, -- set numbered lines
 	relativenumber = true, -- set relative numbered lines
 	completeopt = { "menuone", "noselect" }, -- mostly just for cmp
-	guifont = { "FiraCode Nerd Font Mono:h15:l" },
+	-- guifont = { "FiraCode Nerd Font Mono:h15:l" },
 }
 
 for k, v in pairs(options) do
@@ -38,3 +38,7 @@ vim.opt.formatoptions:remove("cro") -- Stop newline continution of comments
 vim.cmd([[
     autocmd InsertLeave * :silent !im-select com.apple.keylayout.US
 ]])
+
+vim.cmd[[
+    autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+]]
