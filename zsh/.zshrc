@@ -5,8 +5,8 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 export TERM=xterm-256color
 
 # antlr4
-export CLASSPATH=".:/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH"
-alias antlr4='java -jar /usr/local/lib/antlr-4.9.2-complete.jar'
+export CLASSPATH=".:/usr/local/lib/antlr-4.9.1-complete.jar:$CLASSPATH"
+alias antlr4='java -jar /usr/local/lib/antlr-4.9.1-complete.jar'
 alias grun='java org.antlr.v4.gui.TestRig'
 
 # setup fzf
@@ -101,10 +101,10 @@ zinit light zsh-users/zsh-autosuggestions
 # conda completions
 zinit light esc/conda-zsh-completion
 # zshvimode
-# function zvm_config() {
-#   ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
-#   ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
-# }
+function zvm_config() {
+  ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
+  ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
+}
 zinit ice depth=1
 zinit light jeffreytse/zsh-vi-mode
 zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh')

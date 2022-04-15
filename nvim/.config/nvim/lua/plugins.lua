@@ -25,6 +25,11 @@ return require("packer").startup(function(use)
 	})
 	-- vim-tmux-navigator
 	use("christoomey/vim-tmux-navigator")
+	-- vim-kitty-navigator
+	-- use({
+	-- 	"knubie/vim-kitty-navigator",
+	-- 	run = "cp ./*.py ~/.config/kitty/",
+	-- })
 	-- treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -97,7 +102,7 @@ return require("packer").startup(function(use)
 		end,
 		ft = { "markdown" },
 	})
-    -- set root in the runtime
+	-- set root in the runtime
 	use({ "nyngwang/NeoRoot.lua" })
 	-- fzf-lua
 	-- use({
