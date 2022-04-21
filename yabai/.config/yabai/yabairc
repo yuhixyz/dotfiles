@@ -15,12 +15,12 @@ yabai -m config normal_window_border_color  '0xff908caa'
 
 yabai -m config auto_balance on
 # set focus follows mouse mode (default: off, options: off, autoraise, autofocus)
-# yabai -m config focus_follows_mouse autofocus
+# yabai -m config focus_follows_mouse autoraise
 # modify window shadows (default: on, options: on, off, float)
 # example: show shadows only for floating windows
 yabai -m config window_shadow float
 
-apps='^(IntelliJ IDEA|VimR|爱奇艺|kitty|Google Chrome|PDF Expert|WPS Office|Code|Microsoft Word|Microsoft Excel|Microsoft PowerPoint)$'
+apps='^(Safari|Firefox|IntelliJ IDEA|VimR|kitty|Google Chrome|PDF Expert|WPS Office|Code|Microsoft Word|Microsoft Excel|Microsoft PowerPoint)$'
 yabai -m rule --add app!="${apps}" manage=off border=off
 yabai -m rule --add app="^WPS Office$" space=2
 yabai -m rule --add app="^PDF Expert$" space=2
@@ -28,16 +28,17 @@ yabai -m rule --add app="^Microsoft Word$" space=2
 yabai -m rule --add app="^Microsoft Excel$" space=2
 yabai -m rule --add app="^Microsoft PowerPoint$" space=2
 yabai -m rule --add app="^QQ$" space=4
-# yabai -m rule --add app="^Mail$" space=4
+yabai -m rule --add app="^Mail$" space=4
 yabai -m rule --add app="^WeChat$" space=4
 yabai -m rule --add app="^WeCom$" space=4
 yabai -m rule --add app="^YesPlayMusic$" space=5
 yabai -m rule --add app="^Steam$" space=6
-yabai -m rule --add app="^爱奇艺$" space=5
+yabai -m rule --add app="^Firefox$" title="^Library$" manage=off border=off
+yabai -m rule --add app="^Firefox$" title="^$" manage=off border=off
 
 # window opacity
-yabai -m config window_opacity off
-yabai -m config active_window_opacity 0.95 
+yabai -m config window_opacity on
+yabai -m config active_window_opacity 1.0
 yabai -m config normal_window_opacity 0.90
 
 # general settings
