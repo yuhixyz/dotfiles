@@ -75,7 +75,12 @@ ctrl + alt - d : yabai -m space --layout float
 # close window
 alt - x : yabai -m window --close
 
+# minimize window
+alt - m : yabai -m window --minimize
+
 # Stack
 # alt - s进入或者退出stack，alt - d 切换到下一个stack
 alt - s : ~/.config/yabai/toggle-window-bsp-stack.sh
 alt - d : yabai -m window --focus stack.next || yabai -m window --focus stack.first
+
+
