@@ -1,5 +1,5 @@
 source /etc/profile
-export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890 ALL_PROXY=socks5://127.0.0.1:7891
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
 export EDITOR=/opt/homebrew/bin/nvim
 export RANGER_LOAD_DEFAULT_RC=FALSE
 export TERM=xterm-256color
@@ -29,9 +29,9 @@ fi
 # alias
 alias szsh='source ~/.zshrc'
 alias lg='lazygit'
-alias vi='nvim'
-alias vim='nvim'
-alias nvi='nvim'
+alias lvim='~/.local/bin/lvim'
+alias vi='lvim'
+alias vim='lvim'
 alias ra='ranger'
 alias ls='exa -h'
 alias la='ls -a'
