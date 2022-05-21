@@ -27,14 +27,15 @@ yabai -m config window_shadow on
 apps='^(WPS Office|Safari|Firefox|IntelliJ IDEA|VimR|kitty|Google Chrome|PDF Expert|Code|Microsoft Word|Microsoft Excel|Microsoft PowerPoint)$'
 yabai -m rule --add app!="${apps}" manage=off border=off
 # yabai -m rule --add app="^WPS Office$" space=2
-yabai -m rule --add app="^PDF Expert$" space=2
-yabai -m rule --add app="^Microsoft Word$" space=2
+# yabai -m rule --add app="^PDF Expert$" space=2
+# yabai -m rule --add app="^Microsoft Word$" space=2
 yabai -m rule --add app="^Microsoft Word$" title="^Word$" manage=off border=off
 yabai -m rule --add app="^Microsoft Word$" title="^$" manage=off border=off
 yabai -m rule --add app="^Microsoft Word$" title="^字数统计$" manage=off border=off
 yabai -m rule --add app="^Microsoft Word$" title="^Word 偏好设置$" manage=off border=off
-yabai -m rule --add app="^Microsoft PowerPoint$" space=2
-yabai -m rule --add app="^Microsoft Excel$" space=2
+yabai -m rule --add app="^PDF Expert$" title="^偏好设置$" manage=off border=off
+# yabai -m rule --add app="^Microsoft PowerPoint$" space=2
+# yabai -m rule --add app="^Microsoft Excel$" space=2
 yabai -m rule --add app="^QQ$" space=4
 yabai -m rule --add app="^Mail$" space=4
 yabai -m rule --add app="^WeChat$" space=4
@@ -43,6 +44,7 @@ yabai -m rule --add app="^YesPlayMusic$" space=5
 yabai -m rule --add app="^Steam$" space=6
 yabai -m rule --add app="^Firefox$" title="^Library$" manage=off border=off
 yabai -m rule --add app="^Firefox$" title="^$" manage=off border=off
+yabai -m rule --add app="^Firefox$" title="^Extension" manage=off border=off
 yabai -m rule --add app="^IntelliJ IDEA$" title="^Preferences$" manage=off border=off
 
 # window opacity
@@ -57,7 +59,7 @@ yabai -m config layout                       bsp
 # yabai -m config left_padding                 5
 # yabai -m config right_padding                5
 # yabai -m config window_gap                   6
-yabai -m config top_padding                  35 
+yabai -m config top_padding                  33 
 yabai -m config bottom_padding               0
 yabai -m config left_padding                 8
 yabai -m config right_padding                8

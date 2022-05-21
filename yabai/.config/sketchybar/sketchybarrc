@@ -103,10 +103,10 @@ sketchybar --add item battery right            \
                          icon=                \
                          script="~/.config/sketchybar/plugins/power.sh"
 
-sketchybar -m --add event bluetooth_change "com.apple.bluetooth.status"                       \
-              --add item headphones right                                                     \
-              --set headphones icon=􀟥                                                         \
-                               script="~/.config/sketchybar/plugins/ble_headset.sh"           \
+sketchybar -m --add event bluetooth_change "com.apple.bluetooth.status" \
+              --add item headphones right \
+              --set headphones icon=" " \
+                    script="~/.config/sketchybar/plugins/airpods_battery.sh" \
               --subscribe headphones bluetooth_change
 
 sketchybar --add event input_change 'AppleSelectedInputSourcesChangedNotification' \
