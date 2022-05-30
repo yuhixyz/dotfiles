@@ -231,11 +231,31 @@
                         },
                         {
                             "from": {
-                                "key_code": "right_option"
+                                "key_code": "right_command"
                             },
                             "to": [
                                 {
                                     "key_code": "caps_lock"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "delete_or_backspace"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "backslash"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "backslash"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "delete_or_backspace"
                                 }
                             ]
                         }
