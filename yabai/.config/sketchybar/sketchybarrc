@@ -129,8 +129,7 @@ sketchybar --add item battery right            \
 
 sketchybar -m --add event bluetooth_change "com.apple.bluetooth.status" \
               --add item headphones right \
-              --set headphones update_freq=30 \
-                               icon=" " \
+              --set headphones icon=" " \
                                script="~/.config/sketchybar/plugins/airpods_battery.sh" \
               --subscribe headphones bluetooth_change
 
