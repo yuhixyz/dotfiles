@@ -15,3 +15,6 @@ keymap("n", "L", ":bnext<cr>", opt)
 -- write / quit
 keymap("n", "W", ":w<cr>", opt)
 keymap("n", "Q", ":q<cr>", opt)
+
+keymap("n", "n", "nzz", opt)
+keymap("n", "N", "Nzz", opt)
