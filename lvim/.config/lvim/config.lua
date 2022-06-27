@@ -2,6 +2,18 @@ lvim.log.level = "warn"
 lvim.format_on_save = false
 lvim.colorscheme = "everforest"
 lvim.transparent_window = true
+vim.opt.spell = false
+vim.opt.spelllang = "cjk"
+
+-- auto change input method to US when leaving insert mode
+vim.cmd([[
+    autocmd InsertLeave * :silent !im-select com.apple.keylayout.US
+]])
+
+-- vim-sneak
+vim.cmd [[
+  let g:sneak#label = 1
+]]
 
 lvim.leader = "space"
 lvim.keys.insert_mode = {
@@ -14,6 +26,7 @@ lvim.keys.normal_mode = {
   -- Save or Quit
   ["W"] = ":w<cr>",
   ["Q"] = ":q<cr>",
+  ["<C-n>"] = ":nohlsearch<cr>",
   -- Tab switch buffer
   ["<S-l>"] = ":BufferLineCycleNext<CR>",
   ["<S-h>"] = ":BufferLineCyclePrev<CR>",
@@ -42,6 +55,19 @@ lvim.keys.command_mode = {
   ["<C-k>"] = { 'pumvisible() ? "\\<C-p>" : "\\<C-k>"', { expr = true, noremap = true } },
 }
 
+-- whichkey
+lvim.builtin.which_key.mappings["x"] = { "<cmd>BufferKill<cr>", "Close Buffer" }
+lvim.builtin.which_key.mappings["c"] = {
+  name = "Config",
+  n = { ":e ~/.config/nvim/init.lua<cr>", "Edit nvim" },
+  t = { ":e ~/.tmux.conf<cr>", "edit tmux" },
+  y = { ":e ~/.config/yabai/yabairc<cr>", "Edit yabai" },
+  s = { ":e ~/.config/skhd/skhdrc<cr>", "Edit skhd" },
+  b = { ":e ~/.config/sketchybar/sketchybarrc<cr>", "Edit sketchybar" },
+  z = { ":e ~/.zshrc<cr>", "Edit zsh" },
+  a = { ":e ~/.config/alacritty/alacritty.yml<cr>", "Edit alacritty" },
+  k = { ":e ~/.config/kitty/kitty.conf<cr>", "Edit kitty" },
+}
 
 -- telescope config
 local _, actions = pcall(require, "telescope.actions")
@@ -166,6 +192,10 @@ lvim.lsp.automatic_servers_installation = true
 -- Additional Plugins
 lvim.plugins = {
   { "sainnhe/everforest" },
+  { "kana/vim-textobj-user" },
+  { "kana/vim-textobj-entire" },
+  { "justinmk/vim-sneak" },
+  { "tpope/vim-surround" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
