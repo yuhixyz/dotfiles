@@ -21,5 +21,5 @@ else
   fi
   
   sketchybar -m --set $NAME drawing=on
-  sketchybar -m --set $NAME label="$left $case $right"
+  sketchybar -m --set $NAME label="$left $right $case"
 fi
