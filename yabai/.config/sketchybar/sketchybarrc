@@ -57,7 +57,7 @@ sketchybar --add space code center                             \
            --add space research center                         \
            --set research associated_space=2                   \
                       associated_display=1                     \
-                      icon.highlight_color=0xffeb6f92          \
+                      icon.highlight_color=0xfff6c177          \
                       icon=􀥳                                   \
                       label=research                           \
                       click_script="yabai -m space --focus 2"  \
@@ -75,7 +75,7 @@ sketchybar --add space code center                             \
                       associated_display=1                     \
                       icon=􀽎                                   \
                       label=music                              \
-                      icon.highlight_color=0xfff6c177          \
+                      icon.highlight_color=0xff9ccfd8          \
                       click_script="yabai -m space --focus 4"  \
                                                                \
            --add bracket code research social music
