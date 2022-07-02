@@ -9,7 +9,7 @@ sketchybar --bar height=25                                         \
 
 ############## GLOBAL DEFAULTS ############## 
 sketchybar --default drawing=on                                    \
-                     icon.font="Hack Nerd Font Mono:Regular:16.0"  \
+                     icon.font="Hack Nerd Font Mono:Regular:15.0"  \
                      icon.color=0xffffffff                         \
                      label.font="SF Pro:Medium:13.0"               \
                      label.color=0xffffffff
@@ -81,17 +81,20 @@ sketchybar --add space code center                             \
            --add bracket code research social music
 
 
+sketchybar --add alias "LemonMonitor,Item-0" e \
+           --set "LemonMonitor,Item-0" icon.padding_left=400
 
 ############## alias ITEM DEFAULTS ###############
 sketchybar --default label.padding_left=0                      \
                      icon.padding_right=0                      \
                      icon.padding_left=0                       \
-                     label.padding_right=0 
+                     label.padding_right=0                     \
+                     label.font="SF Pro:Medium:12"
 
 ############## RIGHT ITEMS ############## 
-# sketchybar --add alias "Control Center,Clock" right
+sketchybar --add alias "Control Center,Clock" right
 
-# sketchybar --add alias "Control Center,Battery" right
+sketchybar --add alias "Control Center,Battery" right
 
 # sketchybar --add alias "TextInputMenuAgent,Item-0" right
 
@@ -101,17 +104,17 @@ sketchybar --default label.padding_left=0                      \
 sketchybar --default label.padding_left=0                                               \
                      icon.padding_right=6                                               \
                      icon.padding_left=0                                                \
-                     label.padding_right=12 
+                     label.padding_right=9                                             \
 
-sketchybar --add item clock right                                                       \
-           --set clock update_freq=1                                                    \
-                       icon=􀉉                                                           \
-                       script="~/.config/sketchybar/plugins/clock.sh"                                    
+# sketchybar --add item clock right                                                       \
+#            --set clock update_freq=1                                                    \
+#                        icon=􀉉                                                           \
+#                        script="~/.config/sketchybar/plugins/clock.sh"                                    
                                                                                                          
-sketchybar --add item battery right                                                     \
-           --set battery update_freq=30                                                 \
-                         icon=                                                         \
-                         script="~/.config/sketchybar/plugins/power.sh"
+# sketchybar --add item battery right                                                     \
+#            --set battery update_freq=30                                                 \
+#                          icon=                                                         \
+#                          script="~/.config/sketchybar/plugins/power.sh"
 
 sketchybar -m --add event bluetooth_change "com.apple.bluetooth.status"                 \
               --add item headphones right                                               \
