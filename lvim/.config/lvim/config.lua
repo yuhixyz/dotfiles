@@ -17,12 +17,21 @@ vim.cmd [[
 
 lvim.leader = "space"
 lvim.keys.insert_mode = {
-  ["jj"] = "<Esc>",
-  ["kj"] = false,
+  -- custom
+  ["jj"] = "<esc>",
+  -- remove defaults
   ["jk"] = false,
+  ["kj"] = false,
+  ["<A-j>"] = false,
+  ["<A-k>"] = false,
+  ["<A-Up>"] = false,
+  ["<A-Down>"] = false,
+  ["<A-Left>"] = false,
+  ["<A-Right>"] = false,
 }
 
 lvim.keys.normal_mode = {
+  -- custom
   -- Save or Quit
   ["W"] = ":w<cr>",
   ["Q"] = ":q<cr>",
@@ -34,11 +43,26 @@ lvim.keys.normal_mode = {
   ["]q"] = ":cnext<CR>",
   ["[q"] = ":cprev<CR>",
   ["<C-q>"] = ":call QuickFixToggle()<CR>",
+  -- remove defaults
+  ["<C-h>"] = false,
+  ["<C-j>"] = false,
+  ["<C-k>"] = false,
+  ["<C-l>"] = false,
+  ["<C-Up>"] = false,
+  ["<C-Down>"] = false,
+  ["<C-Left>"] = false,
+  ["<C-Right>"] = false,
+  ["<A-j>"] = false,
+  ["<A-k>"] = false,
 }
 lvim.keys.term_mode = {
+  -- custom
   -- Terminal window navigation
   ["<C-j>"] = "<C-\\><C-N><C-w>j",
   ["<C-k>"] = "<C-\\><C-N><C-w>k",
+  -- remove defaults
+  ["<C-h>"] = false,
+  ["<C-l>"] = false,
 }
 lvim.keys.visual_mode = {
   -- Better indenting
@@ -46,9 +70,11 @@ lvim.keys.visual_mode = {
   [">"] = ">gv",
 }
 lvim.keys.visual_block_mode = {
-  -- Move selected line / block of text in visual mode
-  ["K"] = ":move '<-2<CR>gv-gv",
-  ["J"] = ":move '>+1<CR>gv-gv",
+  -- remove defaults
+  ["K"] = false,
+  ["J"] = false,
+  ["<A-j>"] = false,
+  ["<A-k>"] = false,
 }
 lvim.keys.command_mode = {
   ["<C-j>"] = { 'pumvisible() ? "\\<C-n>" : "\\<C-j>"', { expr = true, noremap = true } },
@@ -196,6 +222,7 @@ lvim.plugins = {
   { "kana/vim-textobj-entire" },
   { "justinmk/vim-sneak" },
   { "tpope/vim-surround" },
+  { "christoomey/vim-tmux-navigator" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
