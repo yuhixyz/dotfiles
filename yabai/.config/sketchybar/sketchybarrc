@@ -92,30 +92,32 @@ sketchybar --default label.padding_left=0                      \
                      label.font="SF Pro:Medium:12"
 
 ############## RIGHT ITEMS ############## 
-sketchybar --add alias "Control Center,Clock" right
+# sketchybar --add alias "Control Center,Clock" right
 
-sketchybar --add alias "Control Center,Battery" right
-
+# sketchybar --add alias "Control Center,Battery" right
 
 # sketchybar --add alias "TextInputMenuAgent,Item-0" right
 
 # sketchybar --add alias "LemonMonitor,Item-0" right
 
+# sketchybar --add alias "QQ,Item-0" right                                                \
+#            --set "QQ,Item-0" click_script="open -a 'QQ'"
+
 # RIGHT ITEMS DEFAULTS
 sketchybar --default label.padding_left=0                                               \
                      icon.padding_right=6                                               \
                      icon.padding_left=0                                                \
-                     label.padding_right=6                                              \
+                     label.padding_right=14                                              \
 
-# sketchybar --add item clock right                                                       \
-#            --set clock update_freq=1                                                    \
-#                        icon=􀉉                                                           \
-#                        script="~/.config/sketchybar/plugins/clock.sh"                                    
+sketchybar --add item clock right                                                       \
+           --set clock update_freq=1                                                    \
+                       icon=􀉉                                                           \
+                       script="~/.config/sketchybar/plugins/clock.sh"                                   
                                                                                                          
-# sketchybar --add item battery right                                                     \
-#            --set battery update_freq=30                                                 \
-#                          icon=                                                         \
-#                          script="~/.config/sketchybar/plugins/power.sh"
+sketchybar --add item battery right                                                     \
+           --set battery update_freq=30                                                 \
+                         icon=                                                         \
+                         script="~/.config/sketchybar/plugins/power.sh"
 
 sketchybar -m --add event bluetooth_change "com.apple.bluetooth.status"                 \
               --add item headphones right                                               \
@@ -124,8 +126,6 @@ sketchybar -m --add event bluetooth_change "com.apple.bluetooth.status"         
                                script="~/.config/sketchybar/plugins/airpods_battery.sh" \
               --subscribe headphones bluetooth_change
 
-sketchybar --add alias "QQ,Item-0" right                                                \
-           --set "QQ,Item-0" click_script="open -a 'QQ'"
 
 sketchybar --add event input_change 'AppleSelectedInputSourcesChangedNotification'      \
            --add item input right                                                       \
