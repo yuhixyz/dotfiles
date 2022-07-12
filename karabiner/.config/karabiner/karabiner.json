@@ -181,6 +181,16 @@
                     "simple_modifications": [
                         {
                             "from": {
+                                "key_code": "backslash"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "delete_or_backspace"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
                                 "key_code": "caps_lock"
                             },
                             "to": [
@@ -191,11 +201,11 @@
                         },
                         {
                             "from": {
-                                "key_code": "grave_accent_and_tilde"
+                                "key_code": "delete_or_backspace"
                             },
                             "to": [
                                 {
-                                    "key_code": "caps_lock"
+                                    "key_code": "backslash"
                                 }
                             ]
                         },
@@ -226,36 +236,6 @@
                             "to": [
                                 {
                                     "consumer_key_code": "volume_increment"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "right_command"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "caps_lock"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "delete_or_backspace"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "backslash"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "backslash"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "delete_or_backspace"
                                 }
                             ]
                         }
