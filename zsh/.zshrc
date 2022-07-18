@@ -14,7 +14,7 @@ if [[ ! -d $(brew --prefix)/opt/fzf ]]; then
     brew install fzf
     $(brew --prefix)/opt/fzf/install
 fi
-export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --color=fg:#908caa,bg:#232136,hl:#ea9a97 --color=fg+:#e0def4,bg+:#393552,hl+:#eb6f92 --color=info:#56526e,prompt:#f6c177,pointer:#eb6f92 --color=marker:#9ccfd8,spinner:#56526e,header:#56526e"
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse"
 export FZF_COMPLETION_TRIGGER='\'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
