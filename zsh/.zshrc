@@ -3,6 +3,8 @@ export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_pr
 export EDITOR=~/.local/bin/lvim
 export RANGER_LOAD_DEFAULT_RC=FALSE
 export TERM=xterm-256color
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # antlr4
 export CLASSPATH=".:/usr/local/lib/antlr-4.9.1-complete.jar:$CLASSPATH"
