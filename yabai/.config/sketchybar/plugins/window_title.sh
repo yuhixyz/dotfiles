@@ -20,4 +20,4 @@ sketchybar --set $NAME label="$WINDOW_TITLE"
 # sketchybar --set $NAME label="$WINDOW_TITLE" \
 #                        icon.background.image="app.$(osascript -e "get id of app \"$INFO\"")" \
 #                        icon.background.drawing=on \
-#                        icon.background.image.scale=0.28 
+#                        icon.background.image.scale=0.28
