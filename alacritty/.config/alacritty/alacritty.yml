@@ -2,12 +2,12 @@ env:
   TERM: alacritty
 
 window:
-  dynamic_padding: false
+  dynamic_padding: true
   decorations: buttonless
   padding:
-    x: 5
-    y: 11 
-  opacity: 0.96
+    x: 12
+    y: 7
+  opacity: 0.9
 font:
   normal:
     family: Hack Nerd Font Mono
@@ -26,47 +26,153 @@ font:
     style: Bold Italic
 
   size: 15.0
-  use_thin_strokes: true
 
-# rose-pine-moon
-colors:
-  primary:
-    background: '0x232136'
-    foreground: '0xe0def4'
-  cursor:
-    text: '0x232136'
-    cursor: '0x825B65'
-  vi_mode_cursor:
-    text: '0x191724'
-    cursor: '0x825B65'
-  line_indicator:
-    foreground: None
-    background: None
-  selection:
-    text: CellForeground
-    background: '0x312E45'
-  normal:
-    black:   '0x817c9c'
-    red:     '0xeb6f92'
-    green:   '0x9ccfd8'
-    yellow:  '0xf6c177'
-    blue:    '0x3e8fb0'
-    magenta: '0xc4a7e7'
-    cyan:    '0xea9a97'
-    white:   '0xe0def4'
-  bright:
-    black:   '0x6e6a86'
-    red:     '0xeb6f92'
-    green:   '0x9ccfd8'
-    yellow:  '0xf6c177'
-    blue:    '0x31748f'
-    magenta: '0xc4a7e7'
-    cyan:    '0xebbcba'
-    white:   '0xe0def4'
-  hints:
-    start:
-      foreground: '#817c9c'
-      background: '#393552'
-    end:
-      foreground: '#59546d'
-      background: '#393552'
+cursor:
+  style:
+    shape: Block
+
+  vi_mode_style:
+    style:
+      shape: Block
+
+key_bindings:
+  # Vi Mode
+  - { key: Space,  mods: Alt, mode: ~Search,    action: ToggleViMode            }
+
+# Define
+schemes:
+  everforest_dark_hard: &everforest_dark_hard
+    primary:
+      background: '#2b3339'
+      foreground: '#d3c6aa'
+    normal:
+      black:   '#4b565c'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+    bright:
+      black:   '#4b565c'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+  everforest_dark_medium: &everforest_dark_medium
+    primary:
+      background: '#2f383e'
+      foreground: '#d3c6aa'
+    normal:
+      black:   '#4b565c'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+    bright:
+      black:   '#4b565c'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+  everforest_dark_soft: &everforest_dark_soft
+    primary:
+      background: '#323d43'
+      foreground: '#d3c6aa'
+    normal:
+      black:   '#4b565c'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+    bright:
+      black:   '#4b565c'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+  everforest_light_hard: &everforest_light_hard
+    primary:
+      background: '#fff9e8'
+      foreground: '#5c6a72'
+    normal:
+      black:   '#5c6a72'
+      red:     '#f85552'
+      green:   '#8da101'
+      yellow:  '#dfa000'
+      blue:    '#3a94c5'
+      magenta: '#df69ba'
+      cyan:    '#35a77c'
+      white:   '#dfddc8'
+    bright:
+      black:   '#5c6a72'
+      red:     '#f85552'
+      green:   '#8da101'
+      yellow:  '#dfa000'
+      blue:    '#3a94c5'
+      magenta: '#df69ba'
+      cyan:    '#35a77c'
+      white:   '#dfddc8'
+  everforest_light_medium: &everforest_light_medium
+    primary:
+      background: '#fdf6e3'
+      foreground: '#5c6a72'
+    normal:
+      black:   '#5c6a72'
+      red:     '#f85552'
+      green:   '#8da101'
+      yellow:  '#dfa000'
+      blue:    '#3a94c5'
+      magenta: '#df69ba'
+      cyan:    '#35a77c'
+      white:   '#dfddc8'
+    bright:
+      black:   '#5c6a72'
+      red:     '#f85552'
+      green:   '#8da101'
+      yellow:  '#dfa000'
+      blue:    '#3a94c5'
+      magenta: '#df69ba'
+      cyan:    '#35a77c'
+      white:   '#dfddc8'
+  everforest_light_soft: &everforest_light_soft
+    primary:
+      background: '#f8f0dc'
+      foreground: '#5c6a72'
+    normal:
+      black:   '#5c6a72'
+      red:     '#f85552'
+      green:   '#8da101'
+      yellow:  '#dfa000'
+      blue:    '#3a94c5'
+      magenta: '#df69ba'
+      cyan:    '#35a77c'
+      white:   '#dfddc8'
+    bright:
+      black:   '#5c6a72'
+      red:     '#f85552'
+      green:   '#8da101'
+      yellow:  '#dfa000'
+      blue:    '#3a94c5'
+      magenta: '#df69ba'
+      cyan:    '#35a77c'
+      white:   '#dfddc8'
+
+# Apply
+colors: *everforest_dark_medium
