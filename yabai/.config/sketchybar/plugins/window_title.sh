@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 WINDOW_TITLE=$(/opt/homebrew/bin/yabai -m query --windows --window | jq -r '.title')
 

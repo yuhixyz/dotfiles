@@ -75,8 +75,14 @@ ctrl + alt - d : yabai -m space --layout float
 # close window
 alt - x : yabai -m window --close
 
+# toggle window topmost
+alt - c : yabai -m window --toggle topmost
+
+# alt - i: yabai -m space --layout float
+
 # minimize window
-# alt - m : yabai -m window --minimize
+alt - m : yabai -m window --minimize
+shift + alt - m : ~/.config/yabai/deminimize-window.sh
 
 # Stack
 # alt - s进入或者退出stack，alt - d 切换到下一个stack

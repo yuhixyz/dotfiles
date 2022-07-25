@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
   
 DEVICES="$(system_profiler SPBluetoothDataType -json -detailLevel basic 2>/dev/null | jq -rc '.SPBluetoothDataType[0].device_connected[] | select ( .[] | .device_minorType == "Headphones")' | jq '.[]')"
 if [ "$DEVICES" = "" ]; then
