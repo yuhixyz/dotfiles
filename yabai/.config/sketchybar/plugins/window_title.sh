@@ -11,7 +11,7 @@ if [[ $WINDOW_TITLE = "" ]]; then
 fi
 
 if [[ ${#WINDOW_TITLE} -gt 50 ]]; then
-  WINDOW_TITLE=$(echo "$WINDOW_TITLE" | cut -c 1-50)
+  WINDOW_TITLE=$(echo "$WINDOW_TITLE" | cut -c 1-80)
 fi
 
 sketchybar --set $NAME label="$WINDOW_TITLE"

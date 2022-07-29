@@ -19,6 +19,19 @@ sketchybar --add item  apple left                                    \
                        icon.padding_right=10                         \
                        icon.padding_left=10              
 
+sketchybar --add item  vsplit left                                    \
+           --set vsplit icon=">"                                      \
+                        icon.font="Hack Nerd Font Mono:Regular:15.0"  \
+                        icon.padding_right=10                         \
+                        icon.padding_left=10              
+
+sketchybar --add event window_focus \
+           --add event title_change
+
+sketchybar --add item title left \
+           --set title script="$PLUGINS_DIR/window_title.sh" \
+                       label.font="SF Mono:Medium:13.0"            \
+           --subscribe title front_app_switched window_focus title_change space_change
 
 # center
 SPACE_ICONS=("1°" "2°" "3°" "4°" "5°" "6°" "7°" "8°" "9°")
