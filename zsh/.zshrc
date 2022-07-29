@@ -30,7 +30,6 @@ then
 fi
 # alias
 alias szsh='source ~/.zshrc'
-alias lg='lazygit'
 alias vi='nvim'
 alias vim='nvim'
 alias lvim='~/.local/bin/lvim'
@@ -38,6 +37,7 @@ alias ra='ranger'
 alias ls='exa -h'
 alias la='ls -a'
 alias ll='ls -al'
+alias lg='ll | rg'
 alias mkdir='mkdir -p'
 # z.lua
 alias zh='z -I -t .' # path history fzf
