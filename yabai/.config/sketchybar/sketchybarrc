@@ -2,21 +2,22 @@ PLUGINS_DIR="~/.config/sketchybar/plugins"
 
 
 # bar
-sketchybar --bar height=27                                         \
-                 blur_radius=50                                    \
-                 position=top                                      \
-                 padding_left=10                                   \
-                 padding_right=10                                  \
-                 color=0x44000000                                  \
-                 y_offset=-2
+sketchybar --bar height=26                                            \
+                 blur_radius=50                                       \
+                 position=top                                         \
+                 padding_left=10                                      \
+                 padding_right=10                                     \
+                 color=0x44000000                                     \
+                 y_offset=0                                           \
+                 sticky=on
 
 # left
-sketchybar --add item  apple left                                    \
-           --set apple icon=􀣺                                        \
-                       icon.font="Hack Nerd Font Mono:Regular:15.0"  \
-                       label="Yunhai"                                \
-                       label.font="SF Pro:Medium:13.0"               \
-                       icon.padding_right=10                         \
+sketchybar --add item  apple left                                     \
+           --set apple icon=􀣺                                         \
+                       icon.font="Hack Nerd Font Mono:Regular:15.0"   \
+                       label="yuhi"                                \
+                       label.font="SF Pro:Medium:13.0"                \
+                       icon.padding_right=10                          \
                        icon.padding_left=10              
 
 sketchybar --add item  vsplit left                                    \
@@ -28,13 +29,14 @@ sketchybar --add item  vsplit left                                    \
 sketchybar --add event window_focus \
            --add event title_change
 
-sketchybar --add item title left \
-           --set title script="$PLUGINS_DIR/window_title.sh" \
-                       label.font="SF Mono:Medium:13.0"            \
+sketchybar --add item title left                                      \
+           --set title script="$PLUGINS_DIR/window_title.sh"          \
+                       label.font="SF Pro:Medium:13.0"                \
            --subscribe title front_app_switched window_focus title_change space_change
 
+
 # center
-SPACE_ICONS=("1°" "2°" "3°" "4°" "5°" "6°" "7°" "8°" "9°")
+SPACE_ICONS=("1°" "2°" "3°" "4°" "5°")
 
 for i in "${!SPACE_ICONS[@]}"
 do
@@ -73,20 +75,25 @@ sketchybar --add item battery right                                             
            --set battery update_freq=30                                                 \
                          script="$PLUGINS_DIR/power.sh"
 
+sketchybar --add alias "LemonMonitor,Item-0" right                                      \
+           --set "LemonMonitor,Item-0" label.padding_left=0                             \
+                                       label.padding_right=0                            \
+                                       icon.padding_left=0                              \
+                                       icon.padding_right=0 
+
 sketchybar -m --add event bluetooth_change "com.apple.bluetooth.status"                 \
               --add item headphones right                                               \
               --set headphones updates=on                                               \
                                icon=􀟥                                                   \
+                               label.padding_right=2                                    \
                                script="$PLUGINS_DIR/airpods_battery.sh"                 \
               --subscribe headphones bluetooth_change
-
 
 sketchybar --add event input_change 'AppleSelectedInputSourcesChangedNotification'      \
            --add item input right                                                       \
            --set input script="$PLUGINS_DIR/input.sh"                                   \
                        label.font="SF Pro:Medium Italic:13.0"                           \
            --subscribe input input_change
-
 
 # update
 sketchybar --update
