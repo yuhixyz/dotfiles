@@ -17,7 +17,7 @@ yabai -m config window_border_width         4
 yabai -m config active_window_border_color  '0xfff6c177'
 yabai -m config normal_window_border_color  '0xff908caa'
 
-yabai -m config auto_balance on
+yabai -m config auto_balance off
 # modify window shadows (default: on, options: on, off, float)
 # example: show shadows only for floating windows
 yabai -m config window_shadow float
