@@ -222,7 +222,7 @@ lvim.plugins = {
   { "kana/vim-textobj-entire" },
   { "justinmk/vim-sneak" },
   { "tpope/vim-surround" },
-  { "christoomey/vim-tmux-navigator" },
+  { "NikoKS/kitty-vim-tmux-navigator" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
