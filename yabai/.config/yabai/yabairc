@@ -12,7 +12,7 @@ yabai -m signal --add event=window_focused action="sketchybar -m --trigger windo
 yabai -m signal --add event=window_title_changed action="sketchybar -m --trigger title_change &> /dev/null"
 
 # yabai border
-yabai -m config window_border               on
+yabai -m config window_border               off
 yabai -m config window_border_width         4
 yabai -m config active_window_border_color  '0xfff6c177'
 yabai -m config normal_window_border_color  '0xff908caa'
@@ -20,7 +20,7 @@ yabai -m config normal_window_border_color  '0xff908caa'
 yabai -m config auto_balance off
 # modify window shadows (default: on, options: on, off, float)
 # example: show shadows only for floating windows
-yabai -m config window_shadow float
+yabai -m config window_shadow on
 
 yabai -m config --space 4 layout float
 yabai -m config --space 5 layout float
@@ -33,6 +33,9 @@ yabai -m rule --add app="^Microsoft Word$" title="^字数统计$" manage=off bor
 yabai -m rule --add app="^Microsoft Word$" title="^Word 偏好设置$" manage=off border=off
 yabai -m rule --add app="^PDF Expert$" title="^偏好设置$" manage=off border=off
 yabai -m rule --add app="^QQ$" space=4
+yabai -m rule --add app="^kitty$" opacity=0.9
+yabai -m rule --add app="^Obsidian$" opacity=0.95
+# yabai -m rule --add app="^Code$" opacity=0.95
 yabai -m rule --add app="^微信$" space=4
 yabai -m rule --add app="^企业微信$" space=4
 # yabai -m rule --add app="^QSpace Pro$" layer=above  # topmost
@@ -42,7 +45,7 @@ yabai -m rule --add app="^Steam$" space=5
 yabai -m rule --add app="^Firefox$" title="^Library$" manage=off border=off
 yabai -m rule --add app="^Firefox$" title="^$" manage=off border=off
 yabai -m rule --add app="^Firefox$" title="^Extension" manage=off border=off
-yabai -m rule --add app="^IntelliJ IDEA$" title="^Preferences$" manage=off border=off
+yabai -m rule --add app="^IntelliJ IDEA$" title="Preferences|New.*|.*Welcome*.|Keyboard.*|Checkout*.|.*Configurations|Choose*.|Import*.|.*Charges|Tip*.|Rename*." manage=off border=off
 
 # window opacity
 yabai -m config window_opacity off

@@ -12,16 +12,16 @@ sketchybar --bar height=26                                            \
                  sticky=on
 
 # left
-sketchybar --add item  apple left                                     \
-           --set apple icon=􀣺                                         \
-                       icon.font="Hack Nerd Font Mono:Regular:15.0"   \
-                       label="yuhi"                                \
-                       label.font="SF Pro:Medium:13.0"                \
-                       icon.padding_right=10                          \
-                       icon.padding_left=10              
+# sketchybar --add item  apple left                                     \
+#            --set apple icon=􀣺                                         \
+#                        icon.font="Hack Nerd Font Mono:Regular:15.0"   \
+#                        label="yuhi"                                \
+#                        label.font="SF Pro:Medium:13.0"                \
+#                        icon.padding_right=10                          \
+#                        icon.padding_left=10              
 
 sketchybar --add item  vsplit left                                    \
-           --set vsplit icon=">"                                      \
+           --set vsplit icon="􀏜"                                      \
                         icon.font="Hack Nerd Font Mono:Regular:15.0"  \
                         icon.padding_right=10                         \
                         icon.padding_left=10              
@@ -75,6 +75,10 @@ sketchybar --add item battery right                                             
            --set battery update_freq=30                                                 \
                          script="$PLUGINS_DIR/power.sh"
 
+# sketchybar --add item volume right                                                     \
+#            --set volume update_freq=1                                                  \
+#                         script="$PLUGINS_DIR/volume.sh"
+
 sketchybar --add alias "LemonMonitor,Item-0" right                                      \
            --set "LemonMonitor,Item-0" label.padding_left=0                             \
                                        label.padding_right=0                            \
@@ -92,8 +96,13 @@ sketchybar -m --add event bluetooth_change "com.apple.bluetooth.status"         
 sketchybar --add event input_change 'AppleSelectedInputSourcesChangedNotification'      \
            --add item input right                                                       \
            --set input script="$PLUGINS_DIR/input.sh"                                   \
-                       label.font="SF Pro:Medium Italic:13.0"                           \
+                       label.font="SF Mono:Medium Italic:13.0"                           \
            --subscribe input input_change
 
+sketchybar --add alias "QQ,Item-0" right                                      \
+           --set "QQ,Item-0" label.padding_left=0                             \
+                                       label.padding_right=0                            \
+                                       icon.padding_left=0                              \
+                                       icon.padding_right=0 
 # update
 sketchybar --update
