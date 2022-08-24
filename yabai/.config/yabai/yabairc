@@ -35,7 +35,7 @@ yabai -m rule --add app="^PDF Expert$" title="^偏好设置$" manage=off border=
 yabai -m rule --add app="^QQ$" space=4
 yabai -m rule --add app="^kitty$" opacity=0.9
 yabai -m rule --add app="^Obsidian$" opacity=0.95
-# yabai -m rule --add app="^Code$" opacity=0.95
+yabai -m rule --add app="^Code$" opacity=0.95
 yabai -m rule --add app="^微信$" space=4
 yabai -m rule --add app="^企业微信$" space=4
 # yabai -m rule --add app="^QSpace Pro$" layer=above  # topmost
