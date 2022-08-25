@@ -6,11 +6,6 @@ export TERM=xterm-256color
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# antlr4
-export CLASSPATH=".:/usr/local/lib/antlr-4.9.1-complete.jar:$CLASSPATH"
-alias antlr4='java -jar /usr/local/lib/antlr-4.9.1-complete.jar'
-alias grun='java org.antlr.v4.gui.TestRig'
-
 # setup fzf
 if [[ ! -d $(brew --prefix)/opt/fzf ]]; then
     brew install fzf
@@ -37,7 +32,7 @@ alias ra='ranger'
 alias ls='exa -h'
 alias la='ls -a'
 alias ll='ls -al'
-alias lg='ll | rg'
+alias lg='lazygit'
 alias mkdir='mkdir -p'
 # z.lua
 alias zh='z -I -t .' # path history fzf
@@ -105,7 +100,6 @@ zinit light esc/conda-zsh-completion
 # zshvimode
 function zvm_config() {
   ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
-  ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
 }
 zinit ice depth=1
 zinit light jeffreytse/zsh-vi-mode
