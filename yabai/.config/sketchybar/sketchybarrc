@@ -83,7 +83,8 @@ sketchybar --add alias "LemonMonitor,Item-0" right                              
            --set "LemonMonitor,Item-0" label.padding_left=0                             \
                                        label.padding_right=0                            \
                                        icon.padding_left=0                              \
-                                       icon.padding_right=0 
+                                       icon.padding_right=0 \
+                                       alias.color=0x44ff23ff
 
 sketchybar -m --add event bluetooth_change "com.apple.bluetooth.status"                 \
               --add item headphones right                                               \
@@ -103,13 +104,13 @@ sketchybar --add alias "QQ,Item-0" right                                        
            --set "QQ,Item-0" label.padding_left=0                                       \
                                        label.padding_right=0                            \
                                        icon.padding_left=0                              \
-                                       icon.padding_right=0 
+                                       icon.padding_right=0
 
 sketchybar --add alias "微信,Item-0" right                                              \
            --set "微信,Item-0" label.padding_left=0                                     \
                                        label.padding_right=0                            \
                                        icon.padding_left=0                              \
-                                       icon.padding_right=0 
+                                       icon.padding_right=0
 
 # update
 sketchybar --update

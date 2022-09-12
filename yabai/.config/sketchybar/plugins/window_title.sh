@@ -10,7 +10,7 @@ if [[ $WINDOW_TITLE = "" ]]; then
   WINDOW_TITLE="Desktop"
 fi
 
-if [[ ${#WINDOW_TITLE} -gt 50 ]]; then
+if [[ ${#WINDOW_TITLE} -gt 80 ]]; then
   WINDOW_TITLE=$(echo "$WINDOW_TITLE" | cut -c 1-80)
 fi
 
