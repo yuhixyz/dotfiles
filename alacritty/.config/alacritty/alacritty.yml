@@ -7,7 +7,7 @@ window:
   padding:
     x: 12
     y: 7
-  opacity: 0.9
+  opacity: 1.0
 font:
   normal:
     family: Hack Nerd Font Mono
@@ -176,3 +176,8 @@ schemes:
 
 # Apply
 colors: *everforest_dark_medium
+
+
+# Keybindings
+key_bindings:
+  - { key: N,              mods: Command,                    action: CreateNewWindow      }
