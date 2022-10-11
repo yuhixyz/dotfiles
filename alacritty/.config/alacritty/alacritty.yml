@@ -38,6 +38,7 @@ cursor:
 key_bindings:
   # Vi Mode
   - { key: Space,  mods: Alt, mode: ~Search,    action: ToggleViMode            }
+  - { key: N,              mods: Command,                    action: CreateNewWindow      }
 
 # Define
 schemes:
@@ -177,7 +178,3 @@ schemes:
 # Apply
 colors: *everforest_dark_medium
 
-
-# Keybindings
-key_bindings:
-  - { key: N,              mods: Command,                    action: CreateNewWindow      }
