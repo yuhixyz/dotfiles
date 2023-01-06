@@ -3,9 +3,9 @@
 SOURCE=$(im-select)
 
 case ${SOURCE} in
-    'com.apple.keylayout.US') LABEL='EN' ICON='🇺' ;;
-    'im.rime.inputmethod.Squirrel.Rime') LABEL='Squirrel' ICON='🐿 ' ;;
-    'com.logcg.inputmethod.LogInputMac3.LogInputMac3IME') LABEL='CH' ICON='🦩' ;;
+    'com.apple.keylayout.US') LABEL='EN'  ;;
+    'im.rime.inputmethod.Squirrel.Rime') LABEL='Squirrel' ;;
+    'com.logcg.inputmethod.LogInputMac3.LogInputMac3IME') LABEL='CH' ;;
 esac
 
-sketchybar --set $NAME label="$LABEL"
+sketchybar --set $NAME label="$LABEL" icon=􀇳
