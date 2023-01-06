@@ -19,7 +19,7 @@ yabai -m config window_border_width         2
 yabai -m config active_window_border_color  '0xfff6c177'
 yabai -m config normal_window_border_color  '0xff908caa'
 
-yabai -m config window_border_hidpi on
+yabai -m config window_border_hidpi off
 yabai -m config window_border_blur off
 
 yabai -m config auto_balance off
@@ -29,13 +29,14 @@ yabai -m config auto_balance off
 yabai -m config --space 4 layout float
 yabai -m config --space 5 layout float
 
-apps='^(diagrams.net|Alacritty|Obsidian|YouTube|yuhi|Google Chrome Canary|WPS Office|Safari|Firefox|IntelliJ IDEA|VimR|kitty|Google Chrome|PDF Expert|Code|Microsoft Word|Microsoft Excel|Microsoft PowerPoint)$'
+apps='^(MATLAB|diagrams.net|Alacritty|Obsidian|YouTube|yuhi|Google Chrome Canary|WPS Office|Safari|Firefox|IntelliJ IDEA|VimR|kitty|Google Chrome|PDF Expert|Code|Microsoft Word|Microsoft Excel|Microsoft PowerPoint)$'
 yabai -m rule --add app!="${apps}" manage=off border=off
 yabai -m rule --add app="^Microsoft Word$" title="^Word$" manage=off border=off
 yabai -m rule --add app="^Microsoft Word$" title="^$" manage=off border=off
 yabai -m rule --add app="^Microsoft Word$" title="^字数统计$" manage=off border=off
 yabai -m rule --add app="^Microsoft Word$" title="^Word 偏好设置$" manage=off border=off
 yabai -m rule --add app="^PDF Expert$" title="^偏好设置$" manage=off border=off
+yabai -m rule --add app="^MATLAB$" title="^Figure" manage=off border=off
 yabai -m rule --add app="^QQ$" space=4
 yabai -m rule --add app="^kitty$" opacity=0.9
 yabai -m rule --add app="^Alacritty$" opacity=0.9
