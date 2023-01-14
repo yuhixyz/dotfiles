@@ -25,8 +25,6 @@ then
 fi
 # alias
 alias szsh='source ~/.zshrc'
-alias vi='nvim'
-alias vim='nvim'
 alias lvim='~/.local/bin/lvim'
 alias ra='ranger'
 alias ls='exa -h'
