@@ -98,6 +98,7 @@ sketchybar --add event input_change 'AppleSelectedInputSourcesChangedNotificatio
            --add item input right                                                       \
            --set input script="$PLUGINS_DIR/input.sh"                                   \
                        label.font="SF Mono:Medium Italic:13.0"                          \
+                       icon.padding_left=3                                              \
            --subscribe input input_change
 
 sketchybar --add alias "QQ,Item-0" right                                                \
