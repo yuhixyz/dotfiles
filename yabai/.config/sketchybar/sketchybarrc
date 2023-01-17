@@ -21,7 +21,7 @@ sketchybar --bar height=26                                            \
 #                        icon.padding_left=10              
 
 sketchybar --add item  vsplit left                                    \
-           --set vsplit icon="􀏜"                                      \
+           --set vsplit icon=􀏜                                        \ 
                         icon.font="Hack Nerd Font Mono:Regular:15.0"  \
                         icon.padding_right=10                         \
                         icon.padding_left=10              
