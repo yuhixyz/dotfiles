@@ -66,8 +66,11 @@ sketchybar --default label.padding_left=0                                       
 sketchybar --add item clock center                                                       \
            --set clock update_freq=1                                                    \
                        script="$PLUGINS_DIR/clock.sh"                                   
-                       # icon=􀧞                                                           \
                                                                                                          
+sketchybar --add item calendar right                                                       \
+           --set calendar icon=􀉉                                                           \
+                          script="$PLUGINS_DIR/calendar.sh"                                   
+
 sketchybar --add item battery right                                                     \
            --set battery update_freq=30                                                 \
                          script="$PLUGINS_DIR/power.sh"
