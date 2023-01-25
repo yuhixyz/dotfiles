@@ -37,6 +37,7 @@ yabai -m rule --add app="^Microsoft Word$" title="^字数统计$" manage=off bor
 yabai -m rule --add app="^Microsoft Word$" title="^Word 偏好设置$" manage=off border=off
 yabai -m rule --add app="^PDF Expert$" title="^偏好设置$" manage=off border=off
 yabai -m rule --add app="^MATLAB$" title="^Figure" manage=off border=off
+yabai -m rule --add app="^Google Chrome$" title="^DevTools" manage=off border=off
 yabai -m rule --add app="^QQ$" space=4
 yabai -m rule --add app="^Telegram$" space=4
 yabai -m rule --add app="^kitty$" opacity=0.9
