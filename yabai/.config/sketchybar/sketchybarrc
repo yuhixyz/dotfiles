@@ -3,12 +3,13 @@ PLUGINS_DIR="~/.config/sketchybar/plugins"
 
 # bar
 sketchybar --bar height=26                                            \
-                 blur_radius=50                                       \
+                 blur_radius=0                                        \
                  position=top                                         \
                  padding_left=10                                      \
                  padding_right=10                                     \
                  color=0x44000000                                     \
                  y_offset=0                                           \
+                 topmost=off                                          \
                  sticky=on
 
 # left
@@ -63,17 +64,24 @@ sketchybar --default label.padding_left=0                                       
                      label.padding_right=10                                             \
                      label.font="SF Pro:Medium:12"
 
-sketchybar --add item clock center                                                       \
+sketchybar --add item clock center                                                      \
            --set clock update_freq=1                                                    \
                        script="$PLUGINS_DIR/clock.sh"                                   
-                                                                                                         
-sketchybar --add item calendar right                                                       \
-           --set calendar icon=􀉉                                                           \
+                                                                                                        
+sketchybar --add item calendar right                                                    \
+           --set calendar update_freq=30                                                \
+                          icon=􀉉                                                        \
                           script="$PLUGINS_DIR/calendar.sh"                                   
 
 sketchybar --add item battery right                                                     \
            --set battery update_freq=30                                                 \
                          script="$PLUGINS_DIR/power.sh"
+
+# sketchybar --add alias "控制中心,Battery" right                                      \
+#            --set "控制中心,Battery" label.padding_left=0                             \
+#                                        label.padding_right=0                            \
+#                                        icon.padding_left=0                              \
+#                                        icon.padding_right=0                             
 
 sketchybar --add alias "LemonMonitor,Item-0" right                                      \
            --set "LemonMonitor,Item-0" label.padding_left=0                             \
@@ -89,12 +97,12 @@ sketchybar -m --add event bluetooth_change "com.apple.bluetooth.status"         
                                script="$PLUGINS_DIR/airpods_battery.sh"                 \
               --subscribe headphones bluetooth_change
 
-sketchybar --add event input_change 'AppleSelectedInputSourcesChangedNotification'      \
-           --add item input right                                                       \
-           --set input script="$PLUGINS_DIR/input.sh"                                   \
-                       label.font="SF Mono:Medium Italic:13.0"                          \
-                       icon.padding_left=3                                              \
-           --subscribe input input_change
+# sketchybar --add event input_change 'AppleSelectedInputSourcesChangedNotification'      \
+#            --add item input right                                                       \
+#            --set input script="$PLUGINS_DIR/input.sh"                                   \
+#                        label.font="SF Mono:Medium Italic:13.0"                          \
+#                        icon.padding_left=3                                              \
+#            --subscribe input input_change
 
 sketchybar --add alias "QQ,Item-0" right                                                \
            --set "QQ,Item-0" label.padding_left=0                                       \
@@ -102,11 +110,11 @@ sketchybar --add alias "QQ,Item-0" right                                        
                                        icon.padding_left=0                              \
                                        icon.padding_right=0
 
-sketchybar --add alias "微信,Item-0" right                                              \
-           --set "微信,Item-0" label.padding_left=0                                     \
-                                       label.padding_right=0                            \
-                                       icon.padding_left=0                              \
-                                       icon.padding_right=0
+# sketchybar --add alias "微信,Item-0" right                                              \
+#            --set "微信,Item-0" label.padding_left=0                                     \
+#                                        label.padding_right=0                            \
+#                                        icon.padding_left=0                              \
+#                                        icon.padding_right=0
 
 # update
 sketchybar --update
