@@ -6,6 +6,10 @@ export TERM=xterm-256color
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASS_PATH=$JAVA_HOME/lib
+
 # setup fzf
 if [[ ! -d $(brew --prefix)/opt/fzf ]]; then
     brew install fzf
