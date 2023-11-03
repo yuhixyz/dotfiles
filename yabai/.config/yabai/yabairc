@@ -1,5 +1,6 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
+launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
@@ -29,7 +30,7 @@ yabai -m config auto_balance off
 yabai -m config --space 4 layout float
 yabai -m config --space 5 layout float
 
-apps='^(ChatGPT|MATLAB|diagrams.net|Alacritty|Obsidian|YouTube|yuhi|Google Chrome Canary|WPS Office|Safari|Firefox|IntelliJ IDEA|VimR|kitty|Google Chrome|PDF Expert|Code|Microsoft Word|Microsoft Excel|Microsoft PowerPoint)$'
+apps='^(ChatGPT|MATLAB|diagrams.net|Alacritty|Obsidian|YouTube|yuhi|Google Chrome Canary|WPS Office|Safari|Firefox|VimR|kitty|Google Chrome|PDF Expert|Code|Microsoft Word|Microsoft Excel|Microsoft PowerPoint)$'
 yabai -m rule --add app!="${apps}" manage=off border=off
 yabai -m rule --add app="^Microsoft Word$" title="^Word$" manage=off border=off
 yabai -m rule --add app="^Microsoft Word$" title="^$" manage=off border=off
@@ -46,7 +47,7 @@ yabai -m rule --add app="^Obsidian$" opacity=0.9
 yabai -m rule --add app="^Code$" opacity=1
 yabai -m rule --add app="^微信$" space=4
 yabai -m rule --add app="^企业微信$" space=4
-# yabai -m rule --add app="^QSpace Pro$" layer=above  # topmost
+# yabai -m rule --add app="^QSpace Pro$" manage=off
 yabai -m rule --add app="^音乐$" space=5
 yabai -m rule --add app="^YesPlayMusic$" space=5
 yabai -m rule --add app="^Spotify$" space=5
@@ -54,11 +55,14 @@ yabai -m rule --add app="^Steam$" space=5
 yabai -m rule --add app="^Firefox$" title="^Library$" manage=off border=off
 yabai -m rule --add app="^Firefox$" title="^$" manage=off border=off
 yabai -m rule --add app="^Firefox$" title="^Extension" manage=off border=off
-# yabai -m rule --add app="^IntelliJ IDEA$" title="Copy*|Run*|Select*|SQL*|Data*|Delete*|Create*|Settings|Preferences|New.*|.*Welcome*.|Keyboard.*|Checkout*.|.*Configurations|Choose*.|Import*.|.*Charges|Tip*.|Rename*." manage=off border=off
-# yabai -m rule --add app="^IntelliJ IDEA$" title=".*" manage=off border=off
-# yabai -m rule --add app="^IntelliJ IDEA$" title="demo*" manage=on
-# make idea main window managed by yabai, other popup windows keep float
-yabai -m rule --add app="^IntelliJ IDEA$" title!="( – )" manage=off
+
+# make JetBrains Apps popup windows float
+JB_Apps='^(IntelliJ IDEA)$'
+yabai -m rule --add app="${JB_Apps}" manage=off
+# If `Open last project when launch` is checked, add this rule. And make sure `always show project path` is also checked.
+# yabai -m rule --add app="${JB_Apps}" title=".*\[.*\].*" manage=on 
+yabai -m rule --add app="${JB_Apps}" title="^$"  manage=on border=on
+
 
 # window opacity
 yabai -m config window_opacity off
