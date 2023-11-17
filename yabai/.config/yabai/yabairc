@@ -1,4 +1,5 @@
 #!/bin/bash
+# yabai v5.0.9 macos 14.0.0
 
 launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist
 sudo yabai --load-sa
