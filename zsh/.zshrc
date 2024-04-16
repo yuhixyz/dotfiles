@@ -113,3 +113,4 @@ eval $(thefuck --alias)
 
 # starship
 eval "$(starship init zsh)"
+export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
