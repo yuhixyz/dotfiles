@@ -76,10 +76,10 @@ ctrl + alt - d : yabai -m space --layout float
 alt - x : yabai -m window --close
 
 # toggle window topmost
-alt - c : yabai -m window --toggle topmost
+# alt - c : yabai -m window --toggle topmost
 
-# show on all spaces
-shift + alt - c: yabai -m window --toggle sticky
+# show on all space
+alt - c: yabai -m window --toggle sticky
 
 # minimize window
 alt - m : yabai -m window --minimize
